@@ -1,4 +1,317 @@
 @import "../../external/less/elements.less";
 
+/*
+  Pallette Variables
+  http://www.colourlovers.com/palette/1506339/Inception
+*/
+@2007: #195768;
+@dance: #000B16;
+@drrred: #a30000;
+@rebecca: #e8f2f4;
+@tommy: #9db1ab;
+
+/* Text Color Variables */
+@heading_text_color: #1d242a;
+@body_text_color: #222323;
+@muted_text_color: lighten(#222323, 20%);
+
+/* Element Color Variables */
+@informative: @2007;
+@negative: @drrred;
+@neutral: #333;
+@notice: #e5da00;
+@positive: #486b19;
+
+/* Link Variables */
+@linkColor: darken(@2007, 5);
+@linkColorHover: darken(@2007, 15);
+
+/* Font Variables */
+.heading_font { font-family: "facitweb-1", "facitweb-2", sans-serif; }
+.ui_font { font-family: "droid-sans-1", "droid-sans-2", sans-serif; }
+.reading_font { font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", serif; }
+.mono_font { font-family: "anonymous-pro-1","anonymous-pro-2",sans-serif; }
+
+/* 
+  Unit Variables
+  This is used is used to standardize spacing.
+*/
+@unit: 6px;
+
+@large_space: @unit * 6;
+@medium_space: @unit * 4;
+@small_space: @unit * 2;
+
+
+/* 
+  Grid Variables 
+  http://designshack.net/articles/css/introducing-the-less-css-grid
+*/
+@columnWidth: @unit * 9;
+@gutter: @unit * 2;
+
+/* Mixins */
+
+
+
+/* 
+  Clearfix for clearing floats like a boss 
+  h5bp.com/q
+*/
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
 body {
+  background-image: url('/static/images/patterns/bgnoise.gif');
+  text-shadow: 1px 1px 1px #fff;
+  .ui_font;
+  vertical-align: middle;
+  color: @body_text_color;
+  font-size: 12px;
+}
+strong {
+  font-weight: bold;
+}
+// multi-line elements
+p, ul, ol {
+  margin-bottom: @medium_space;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+p {
+  .reading_font;
+  text-shadow: none;
+}
+ul, ol {
+  margin: 0em 0em;
+}
+// this thing was stubborn >:(
+body, ol, li {
+  .unstyled;
+}
+li {
+  margin-left: @unit;
+  //  this is custom for the ruby form frameowork
+  &.input {
+    list-style-type: none;
+    margin-bottom: 0em;
+    padding: .2em;
+  }
+}
+ol, ul {
+  &.unstyled {
+    list-style-type: none;
+    li {
+      margin-left: 0em;
+      padding: 0em;
+    }
+  }
+}
+.unstyled {
+  margin: 0em;
+  padding: 0em;
+  .user {
+    background-color: transparent;
+    border: none;
+    padding: 0em;
+  }
+}
+pre {
+  .mono_font; 
+  padding: 1em;
+  .box-shadow(inset 1px 1px 1px #ccc);
+  .rounded(3px);
+  background-color: #efefef;
+  margin: 1em 0em;
+  border: 1px solid #f9f9f9;
+}
+em {
+  font-style: italic;
+}
+// single-line text elements
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  margin-bottom: @unit * 3;
+  .heading_font;
+}
+h1, h2, h3, h4 {
+  color: @heading_text_color;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1.1em;
+}
+a {
+  color: @linkColor;
+  text-decoration: underline;
+  &.invert {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:hover {
+    color: @linkColorHover;
+    text-decoration: none;
+  }
+}
+.muted {
+  color: @muted_text_color;
+  a {
+    color: lighten(@muted_text_color, 15%);
+    &:hover {
+      color: lighten(@muted_text_color, 10%);
+    }
+  }
+}
+hr {
+  margin: @medium_space 0em;
+  height: 0px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  .box-shadow(1px 1px 2px #fff);
+  &.whole_box {
+    position: relative;
+    left: -1em;
+    width: 100%;
+    padding-left: 2em;
+  }
+  &.space {
+    border: none;
+    .box-shadow(none);
+    height: .1em;
+  }
+  &.double {
+    margin: @medium_space 0em;
+  }
+  &.half {
+    margin: @small_space 0em;
+  }
+}
+table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1em;
+  thead {
+    background-color: #f7f7f7;
+    border-bottom: .1em solid #e0e0e0;
+    font-weight: bold;
+    th {
+      border-right: .1em solid #e0e0e0;
+    }
+  }
+  th, td {
+    padding: .5em 1em;
+  }
+}
+
+.page_centered {
+  margin: auto;
+}
+img {
+  &.left {
+    margin-right: 1em;
+  }
+}
+.inline {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.avatar {
+  vertical-align: middle;
+  width: @unit * 7;
+  height: @unit * 7;
+}
+.media {
+  display: inline-block;
+  .rounded(3px);
+  margin-bottom: @medium_space;
+  &.inline {
+    margin-bottom: 0px;
+  }
+  img {
+    max-width: 500px;
+    .rounded(3px);
+    padding: .1em;
+    border: 1px solid #ccc;
+  }
+  .rounded(3px);
+  &.float_left {
+    margin-right: @small_space;
+  }
+}
+a.media:hover {
+  img {
+    &.avatar {
+      .drop-shadow(0px, 0px, 1px, .1);
+    }
+    border: 1px solid #777;
+    .drop-shadow(0px, 0px, 2px, .2);
+  }
+}
+
+
+/* Grid Logic */
+@allColumns: @columnWidth * 12;
+@allGutters: (@gutter * 12) * 2;
+@totalWidth: @allColumns + @allGutters;
+.theWidth (@theColumn: 1, @theGutter: 0) {
+  width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
+  margin: 0 @gutter;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.grid1 {.theWidth(1,0);}
+.grid2 {.theWidth(2,2);}
+.grid3 {.theWidth(3,4);}
+.grid4 {.theWidth(4,6);}
+.grid5 {.theWidth(5,8);}
+.grid6 {.theWidth(6,10);}
+.grid7 {.theWidth(7,12);}
+.grid8 {.theWidth(8,14);}
+.grid9 {.theWidth(9,16);}
+.grid10 {.theWidth(10,18);}
+.grid11 {.theWidth(11,20);}
+.grid12 {.theWidth(12,22);}
+.row {
+  width: @totalWidth;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.row .row {
+  margin: 0 (@gutter * -1);
+  width: auto;
+  display: inline-block;
 }
