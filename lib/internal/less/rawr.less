@@ -95,46 +95,42 @@ p {
   text-shadow: none;
 }
 ul, ol {
-  margin: 0em 0em;
-}
-// this thing was stubborn >:(
-body, ol, li {
-  .unstyled;
+  margin: 0px 0px;
 }
 li {
   margin-left: @unit;
   //  this is custom for the ruby form frameowork
   &.input {
     list-style-type: none;
-    margin-bottom: 0em;
-    padding: .2em;
+    margin-bottom: 0px;
+    padding: 2px;
   }
 }
 ol, ul {
   &.unstyled {
     list-style-type: none;
     li {
-      margin-left: 0em;
-      padding: 0em;
+      margin-left: 0px;
+      padding: 0px;
     }
   }
 }
 .unstyled {
-  margin: 0em;
-  padding: 0em;
+  margin: 0px;
+  padding: 0px;
   .user {
     background-color: transparent;
     border: none;
-    padding: 0em;
+    padding: 0px;
   }
 }
 pre {
   .mono_font; 
-  padding: 1em;
+  padding: @small_space;
   .box-shadow(inset 1px 1px 1px #ccc);
   .rounded(3px);
   background-color: #efefef;
-  margin: 1em 0em;
+  margin: @small_space 0px;
   border: 1px solid #f9f9f9;
 }
 em {
@@ -195,44 +191,44 @@ a {
   }
 }
 hr {
-  margin: @medium_space 0em;
+  margin: @medium_space 0px;
   height: 0px;
   border: none;
   border-bottom: 1px solid #e0e0e0;
   .box-shadow(1px 1px 2px #fff);
   &.whole_box {
     position: relative;
-    left: -1em;
+    left: -@small_space;
     width: 100%;
-    padding-left: 2em;
+    padding-left: @medium_space;
   }
   &.space {
     border: none;
     .box-shadow(none);
-    height: .1em;
+    height: 1px;
   }
   &.double {
-    margin: @medium_space 0em;
+    margin: @medium_space 0px;
   }
   &.half {
-    margin: @small_space 0em;
+    margin: @small_space 0px;
   }
 }
 table {
   width: 100%;
   text-align: left;
   border: 1px solid #e0e0e0;
-  margin-bottom: 1em;
+  margin-bottom: @small_space;
   thead {
     background-color: #f7f7f7;
-    border-bottom: .1em solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     font-weight: bold;
     th {
-      border-right: .1em solid #e0e0e0;
+      border-right: 1px solid #e0e0e0;
     }
   }
   th, td {
-    padding: .5em 1em;
+    padding: @unit @small_space;
   }
 }
 
@@ -241,7 +237,7 @@ table {
 }
 img {
   &.left {
-    margin-right: 1em;
+    margin-right: @small_space;
   }
 }
 .inline {
@@ -263,7 +259,7 @@ img {
   img {
     max-width: 500px;
     .rounded(3px);
-    padding: .1em;
+    padding:  1px;
     border: 1px solid #ccc;
   }
   .rounded(3px);
