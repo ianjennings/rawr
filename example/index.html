@@ -8,27 +8,171 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet/less" type="text/css" href="../lib/internal/less/rawr.less">
         <script src="../lib/external/js/less.min.js" type="text/javascript"></script>
-        <style>
-            #boxsize button,
-            #boxsize input,
-            #boxsize select,
-            #boxsize textarea {
-                width: 200px;
-                padding: 5px;
-                border: 1px solid #333;
-            }
-        </style>
     </head>
     <body>
         <div class="row">
             <div class="grid12">
+                <div class="box">
+                    <hgroup class="inline">
+                        <h1 class="inline">RAWR!</h1>
+                        <h4 class="muted">Make Your Design Scream</h4>
+                    </hgroup>
+                </div>
+                <h2>Quick Overview</h2>
+                <p>RAWR! can be thought of as a framework for pragmatic design. It was developed during the creation of <a href="http://hackerleague.org">Hacker League</a> by me, <a href="http://twitter.com/meetjennings">Ian Jennings</a>. It is a full implementation of ideas presented in <a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong">this slideshow</a> by <a href="http://twitter.com/wolfr_">Johan Ronsse</a> bundled with a few extras to help get you designing quickly.</p>
+                <h4>You'll probably be interested in RAWR! if:</h4>
+                <ul>
+                    <li>You would prefer using an IDE rather than opening Photoshop or Illustrator <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
+                    <li>You write scripts to solve problems <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
+                    <li>You want your design to look passable without the intervention of a dedicated designer <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/43">#43</a></sup></li>
+                </ul>
+                <div class="row">
+                    <div class="grid12">
+                        <h3>Typography</h3>
+                        <hr />
+                    </div>
+                    <div class="grid8">
+                        <h4>Paragraphs</h4>
+                        <p>
+                        Wayfarers organic thundercats, mcsweeney's vinyl bicycle rights irony salvia lo-fi portland williamsburg mlkshk before they sold out craft beer. Farm-to-table you probably haven't heard of them etsy, banh mi four loko banksy helvetica. Freegan twee craft beer dreamcatcher, +1 hoodie mcsweeney's lomo brooklyn leggings next level. Wolf iphone lo-fi seitan mustache. Wayfarers trust fund portland bicycle rights american apparel twee. Leggings twee four loko, marfa fixie irony mlkshk williamsburg DIY echo park put a bird on it readymade vinyl. Quinoa chambray tattooed, brooklyn dreamcatcher aesthetic cliche tumblr gluten-free.
+                        </p>
+                    </div>
+                    <div class="grid4">
+                        <h5>Code</h5>
+                        <pre>&lt;h4&gt;Paragraphs&lt;/h4&gt;
+&lt;p&gt;
+    Wayfarers...
+&lt;/p&gt;</pre>
+                        <h5>Tips</h5>
+                        <ul>
+                            <li>Try to keep paragraphs less than 60 characters per line</li>
+                            <li>Remember that all text does not have to be in paragraphs, and paragraphs are not limited to just text</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Grid</h3>
+                <hr />
+                <div id="grid_example">
+                    <div class="row">
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                        <div class="grid1">
+                            <div class="box">1</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                        <div class="grid2">
+                            <div class="box">2</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid3">
+                            <div class="box">3</div>
+                        </div>
+                        <div class="grid3">
+                            <div class="box">3</div>
+                        </div>
+                        <div class="grid3">
+                            <div class="box">3</div>
+                        </div>
+                        <div class="grid3">
+                            <div class="box">3</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid4">
+                            <div class="box">4</div>
+                        </div>
+                        <div class="grid4">
+                            <div class="box">4</div>
+                        </div>
+                        <div class="grid4">
+                            <div class="box">4</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid6">
+                            <div class="box">6</div>
+                        </div>
+                        <div class="grid6">
+                            <div class="box">6</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid9">
+                            <div class="box">9</div>
+                        </div>
+                        <div class="grid3">
+                            <div class="box">3</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid4">
+                            <div class="box">4</div>
+                        </div>
+                        <div class="grid8">
+                            <div class="box">8</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid12">
+                        <h4>Grid Notes</h4>
+                        <p>RAWR supports a 12 column grid.</p><strong>.row</strong>s are horizontal groupings of 
+                    </div>
+                </div>
                 <h1>Heading 1</h1>
                 <h2>Heading 2</h2>
                 <h3>Heading 3</h3>
                 <h4>Heading 4</h4>
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
-
                 <section>
                     <h1>Heading 1 (in section)</h1>
                     <h2>Heading 2 (in section)</h2>
@@ -101,7 +245,6 @@
                 <h3>audio</h3>
 
                 <audio controls></audio>
-                <audio></audio>
 
                 <h3>img</h3>
 
@@ -128,12 +271,12 @@
                 <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
 
                 <pre><code>&lt;html>
-            &lt;head>
-            &lt;/head>
-            &lt;body>
-                &lt;div class="main"> &lt;div>
-            &lt;/body>
-        &lt;/html></code></pre>
+    &lt;head>
+    &lt;/head>
+    &lt;body>
+        &lt;div class="main"> &lt;div>
+    &lt;/body>
+&lt;/html></code></pre>
 
                 <h3>blockquote</h3>
 
@@ -251,25 +394,6 @@
 
                 <form>
                     <fieldset>
-                        <legend>Inputs as descendents of labels (form legend)</legend>
-                        <p><label>Text input <input type="text" value="default value that goes on and on without stopping or punctuation"></label></p>
-                        <p><label>Email input <input type="email"></label></p>
-                        <p><label>Search input <input type="search"></label></p>
-                        <p><label>Tel input <input type="tel"></label></p>
-                        <p><label>URL input <input type="url" placeholder="http://"></label></p>
-                        <p><label>Password input <input type="password" value="password"></label></p>
-                        <p><label>File input <input type="file"></label></p>
-
-                        <p><label>Radio input <input type="radio" name="rad"></label></p>
-                        <p><label>Checkbox input <input type="checkbox"></label></p>
-                        <p><label><input type="radio" name="rad"> Radio input</label></p>
-                        <p><label><input type="checkbox"> Checkbox input</label></p>
-
-                        <p><label>Select field <select><option>Option 01</option><option>Option 02</option></select></label></p>
-                        <p><label>Textarea <textarea cols="30" rows="5" >Textarea text</textarea></label></p>
-                    </fieldset>
-
-                    <fieldset>
                         <legend>Inputs as siblings of labels</legend>
                         <p><label for="ic">Color input</label> <input type="color" id="ic" value="#000000"></p>
                         <p><label for="in">Number input</label> <input type="number" id="in" min="0" max="10" value="5"></p>
@@ -300,38 +424,36 @@
                         <p><button type="button">Button (button)</button></p>
                         <p><button type="submit">Submit (button)</button></p>
                     </fieldset>
+                </form>
+                <form class="wide">
+                    <fieldset>
+                        <legend>Inputs as siblings of labels</legend>
+                        <p><label for="ic">Color input</label> <input type="color" id="ic" value="#000000"></p>
+                        <p><label for="in">Number input</label> <input type="number" id="in" min="0" max="10" value="5"></p>
+                        <p><label for="ir">Range input</label> <input type="range" id="ir" value="10"></p>
+                        <p><label for="idd">Date input</label> <input type="date" id="idd" value="1970-01-01"></p>
+                        <p><label for="idm">Month input</label> <input type="month" id="idm" value="1970-01"></p>
+                        <p><label for="idw">Week input</label> <input type="week" id="idw" value="1970-W01"></p>
+                        <p><label for="idt">Datetime input</label> <input type="datetime" id="idt" value="1970-01-01T00:00:00Z"></p>
+                        <p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></p>
 
-                    <fieldset id="boxsize">
-                        <legend>box-sizing tests</legend>
-                        <div><input type="text" value="text"></div>
-                        <div><input type="email" value="email"></div>
-                        <div><input type="search" value="search"></div>
-                        <div><input type="url" value="http://example.com"></div>
-                        <div><input type="password" value="password"></div>
+                        <p><label for="irb">Radio input</label> <input type="radio" id="irb" name="rad"></p>
+                        <p><label for="icb">Checkbox input</label> <input type="checkbox" id="icb"></p>
 
-                        <div><input type="color" value="#000000"></div>
-                        <div><input type="number" value="5"></div>
-                        <div><input type="range" value="10"></div>
-                        <div><input type="date" value="1970-01-01"></div>
-                        <div><input type="month" value="1970-01"></div>
-                        <div><input type="week" value="1970-W01"></div>
-                        <div><input type="datetime" value="1970-01-01T00:00:00Z"></div>
-                        <div><input type="datetime-local" value="1970-01-01T00:00"></div>
-            
-                        <div><input type="radio"></div>
-                        <div><input type="checkbox"></div>
+                        <p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
+                        <p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
+                    </fieldset>
 
-                        <div><select><option>Option 01</option><option>Option 02</option></select></div>
-                        <div><textarea cols="30" rows="5" >Textarea text</textarea></div>
+                    <fieldset>
+                        <legend>Clickable inputs and buttons</legend>
+                        <p><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></p>
+                        <p><input type="reset" value="Reset (input)"></p>
+                        <p><input type="button" value="Button (input)"></p>
+                        <p><input type="submit" value="Submit (input)"></p>
 
-                        <div><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></div>
-                        <div><input type="reset" value="Reset (input)"></div>
-                        <div><input type="button" value="Button (input)"></div>
-                        <div><input type="submit" value="Submit (input)"></div>
-
-                        <div><button type="reset">Reset (button)</button></div>
-                        <div><button type="button">Button (button)</button></div>
-                        <div><button type="submit">Submit (button)</button></div>
+                        <p><button type="reset">Reset (button)</button></p>
+                        <p><button type="button">Button (button)</button></p>
+                        <p><button type="submit">Submit (button)</button></p>
                     </fieldset>
                 </form>
             </div>

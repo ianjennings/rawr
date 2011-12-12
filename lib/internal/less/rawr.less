@@ -44,6 +44,7 @@
 @small_space: @unit * 2;
 
 @base_font_size: @unit * 2;
+@reading_font_size: 16px;
 
 /* 
   Grid Variables 
@@ -97,11 +98,11 @@
 .grid12 {.theWidth(12,22);}
 .row {
   width: @totalWidth;
-  margin: 0 auto;
+  margin: @large_space auto;
   overflow: hidden;
 }
 .row .row {
-  margin: 0 (@gutter * -1);
+  margin: @large_space (@gutter * -1);
   width: auto;
   display: inline-block;
 }
@@ -140,9 +141,21 @@
   margin: 0px;
   padding: 0px;
 }
+.muted {
+  color: @muted_text_color;
+  a {
+    color: lighten(@muted_text_color, 15%);
+    &:hover {
+      color: lighten(@muted_text_color, 10%);
+    }
+  }
+}
 
 /* HTML ELEMENTS */
-
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
   background-image: url('/static/images/patterns/bgnoise.gif');
   text-shadow: 1px 1px 1px #fff;
@@ -155,27 +168,20 @@ strong {
   font-weight: bold;
 }
 // multi-line elements
-p, ul, ol {
-  margin-bottom: @medium_space;
-  font-size: 16px;
+p, ul, ol, dl, dt, dd, address {
+  font-size: @reading_font_size;
   line-height: 1.5em;
 }
 p {
+  margin: @medium_space 0px;
   .reading_font;
   text-shadow: none;
-  margin: @medium_space 0;
-}
-ul, ol {
-  margin: 0px 0px;
-}
-li {
-  margin-left: @unit;
+  margin: @medium_space 0px;
 }
 ol, ul {
   &.unstyled {
     list-style-type: none;
     li {
-      margin-left: 0px;
       padding: 0px;
     }
   }
@@ -188,7 +194,7 @@ pre {
   .box-shadow(inset 1px 1px 1px #ccc);
   .rounded(3px);
   background-color: #efefef;
-  margin: @small_space 0px;
+  margin-bottom: @medium_space;
   border: 1px solid #f9f9f9;
 }
 em {
@@ -197,7 +203,7 @@ em {
 // single-line text elements
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1em;
-  margin-bottom: @unit * 3;
+  margin: @medium_space 0px;
   font-weight: bold;
   .heading_font;
 }
@@ -211,22 +217,22 @@ h1, h2, h3, h4 {
   color: @heading_text_color;
 }
 h1 {
-  font-size: @base_font_size * 2;
+  font-size: @reading_font_size * 2;
 }
 h2 {
-  font-size: @base_font_size * 1.8;
+  font-size: @reading_font_size * 1.8;
 }
 h3 {
-  font-size: @base_font_size * 1.6;
+  font-size: @reading_font_size * 1.6;
 }
 h4 {
-  font-size: @base_font_size * 1.4;
+  font-size: @reading_font_size * 1.4;
 }
 h5 {
-  font-size: @base_font_size * 1.2;
+  font-size: @reading_font_size * 1.2;
 }
 h6 {
-  font-size: @base_font_size;
+  font-size: @reading_font_size;
 }
 a {
   color: @linkColor;
@@ -299,13 +305,33 @@ table {
 }
 img {
   &.float_left {
-    margin-right: @small_space;
+    margin-right: @medium_space;
   }
   &.float_right {
-    margin-left: @small_space;
+    margin-left: @medium_space;
   }
 }
-
+blockquote {
+  font-size: @reading_font_size;
+  quotes: "\201C" "\201D";
+}
+blockquote:before {
+  content: open-quote; 
+  font-weight: bold;
+  font-size: @unit * 5;
+}
+blockquote:after {
+  content: close-quote; 
+  font-weight: bold;
+  font-size: @unit * 5;
+}
+caption {
+  font-size: @reading_font_size;
+  line-height: 1.5em;
+}
+audio, svg, video {
+  margin-bottom: @medium_space;
+}
 /* Arrangements */
 .inline {
   display: inline-block;
@@ -346,15 +372,6 @@ img {
   }
 }
 
-.muted {
-  color: @muted_text_color;
-  a {
-    color: lighten(@muted_text_color, 15%);
-    &:hover {
-      color: lighten(@muted_text_color, 10%);
-    }
-  }
-}
 .media {
   display: inline-block;
   .rounded(3px);
@@ -383,6 +400,72 @@ a.media:hover {
   }
 }
 
+/* Forms */
+input, select, textarea {
+  outline: none;
+  .rounded(3px);
+  border: 1px solid #e0e0e0;
+  .box-shadow(1px 1px 2px #fefefe);
+  padding: @unit;
+  &[type="text"], &[type="password"] {
+    cursor: text;
+  }
+  &:focus {
+    border: 1px solid #bbb;
+  }
+  display: block;
+}
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  font-size: 14px;
+  cursor: pointer;
+  padding: @unit;
+  .rounded(3px);
+  text-decoration: none;
+}
+input[type="submit"], button[type="submit"] {
+  .buttonize(@positive);
+}
+input[type="reset"], button[type="reset"] {
+  .buttonize(@negative);
+}
+input[type="button"] , button{
+  .buttonize(@neutral);
+}
+input[type="checkbox"], input[type="radio"] {
+  display: inline-block;
+}
+abbr[title], dfn[title] {
+  border-bottom: .1em dotted;
+  cursor: help;
+  margin-left: .2em;
+}
+legend {
+  font-size: @reading_font_size * 1.2;
+  font-weight: bold;
+}
+fieldset {
+  margin-bottom: @medium_space;
+  padding:  0px @medium_space;
+  .rounded(5px);
+}
+label {
+  line-height: 2em;
+}
+form {
+  width: 100%;
+  &.wide {
+    label {
+      width: 30%;
+      text-align: right;
+      display: inline-block;
+      margin-right: @medium_space;
+    }
+    input, select, textarea, ol, ul {
+      display: inline-block;
+    }
+  }
+}
+
 /* Alerts */
 .alert {
   .rounded(4px);
@@ -402,9 +485,8 @@ a.media:hover {
 }
 
 /* Buttons */
-
 .button {
-  padding: .4em .8em;
+  padding: @unit;
   .rounded(3px);
   text-decoration: none;
   .buttonize(@neutral);
@@ -466,56 +548,24 @@ a.media:hover {
   }
 }
 
-/* Forms */
-input[type="text"], input[type="password"], input[type="email"], select, textarea {
-  outline: none;
-  .rounded(3px);
-  border: 1px solid #e0e0e0;
-  .box-shadow(1px 1px 2px #fefefe);
-  padding: .5em;
-  margin-bottom: .5em;
-  width: 15em;
-  &[type="text"], &[type="password"] {
-    cursor: text;
+/* Boxes */
+.box {
+  padding: @medium_space;
+  background-color: #e1e1e1;
+  .rounded (6px);
+}
+
+
+/* Example Page */
+#grid_example {
+  .row {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
-  &:focus {
-    border: 1px solid #bbb;
+  .box {
+    margin-top: 0px;
+    margin-bottom: @unit;
+    padding: @small_space;
+    text-align: center;
   }
-}
-button, input[type="submit"], input[type="reset"], input[type="button"] {
-  font-size: 14px;
-  cursor: pointer;
-  padding: .4em .8em;
-  .rounded(3px);
-  text-decoration: none;
-}
-input[type="submit"], button[type="submit"] {
-  .buttonize(@positive);
-}
-input[type="reset"], button[type="reset"] {
-  .buttonize(@negative);
-}
-input[type="button"] , button{
-  .buttonize(@neutral);
-}
-input[type="checkbox"] {
-  margin: none;
-  margin-right: .5em;
-}
-abbr[title], dfn[title] {
-  border-bottom: .1em dotted;
-  cursor: help;
-  margin-left: .2em;
-}
-legend {
-  font-size: @base_font_size * 1.6;
-  font-weight: bold;
-}
-fieldset {
-  margin-bottom: @medium_space;
-  padding:  0px @medium_space;
-  .rounded(5px);
-}
-label {
-  line-height: 1.5em;
 }
