@@ -17,15 +17,42 @@
                     <hr />
                     <h4 class="inline muted">Make Your Design Scream</h4>
                 </div>
+                <hr class="space" />
                 <p>RAWR! can be thought of as a framework to help developers design websites. It was developed during the creation of <a href="http://hackerleague.org">Hacker League</a> by me, <a href="http://twitter.com/meetjennings">Ian Jennings</a>. It is a full implementation of ideas presented in <a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong">this slideshow</a> by <a href="http://twitter.com/wolfr_">Johan Ronsse</a> bundled with a few extras to help get you designing quickly.</p>
-                <hr />
+                <hr class="space" />
                 <h4>You'll probably be interested in RAWR! if:</h4>
                 <ul>
                     <li>You would prefer using an IDE rather than opening Photoshop or Illustrator <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
                     <li>You write scripts to solve problems <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
                     <li>You want your design to look passable without the intervention of a dedicated designer <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/43">#43</a></sup></li>
                 </ul>
-                <hr class="double space" />
+                <hr class="space" />
+                <h2>Some RAWR guidelines</h2>
+                <ul>
+                    <li>
+                        Margins
+                        <ul>
+                            <li>
+                                Use margins to distance elements from other elements
+                                <ul>
+                                    <li>Close elements are associated with one another</li>
+                                    <li>Use <code>.small_space</code> for closely related elements</li>
+                                </ul>
+                            </li>
+                            <li>Every element has an equal top and bottom margin by default</li>
+                            <li>These margins can be modified with an assortment of spacing classes</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Padding
+                        <ul>
+                            <li>Use padding to distance the contents of the element from it's border</li>
+                            <li>Padding is very rarely used without a <code>background</code></li>
+                            <li>If you don't have a background, you probably want margins instead</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr class="large space" />
                 <h2>Typography</h2>
                 <hr />
                 <hr class="space" />
@@ -39,14 +66,13 @@
             </div>
             <div class="span5">
                 <h5>Code</h5>
-                <pre>&lt;h4&gt;Paragraphs&lt;/h4&gt;
+                <pre><code>&lt;h4&gt;Paragraphs&lt;/h4&gt;
 &lt;p&gt;
     Wayfarers...
-&lt;/p&gt;</pre>
+&lt;/p&gt;</code></pre>
                 <h5>Notes</h5>
                 <ul>
                     <li>Try to keep paragraphs less than 60 characters per line <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/68">#68</a></sup></li>
-                    <li>Remember that all text does not have to be in paragraphs, and paragraphs are not limited to just text</li>
                 </ul>
             </div>
             <div class="span12">
@@ -84,7 +110,7 @@
             </div>
             <div class="span5">
                 <h5>Code</h5>
-                <pre>&lt;address&gt;Address: somewhere, world&lt;/address&gt;
+                <pre><code>&lt;address&gt;Address: somewhere, world&lt;/address&gt;
 &lt;p&gt;
 The &lt;a href=&quot;#&quot;&gt;a element&lt;/a&gt; example
 &lt;br&gt;
@@ -97,7 +123,7 @@ The &lt;cite&gt;cite element&lt;/cite&gt; example
 The &lt;code&gt;code element&lt;/code&gt; example
 &lt;br&gt;
 ...
-&lt;/p&gt;</pre>
+&lt;/p&gt;</code></pre>
             </div>
             <div id="span_example">
                 <div class="span12">
@@ -202,21 +228,21 @@ The &lt;code&gt;code element&lt;/code&gt; example
                 <div class="span7">
                     <h4>Code</h4>
                     <h6>Two Equal Columns Layout</h6>
-                    <pre>&lt;div class=&quot;row&quot;&gt;
+                    <pre><code>&lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;span6&quot;&gt;
-&lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;span6&quot;&gt;
-&lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</pre>
+    &lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;div class=&quot;span6&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
                 <div class="span5">
                     <h4>Notes</h4>
                     <ul>
-                        <li>RAWR uses a 12 column span with <strong>.spanX</strong> style classes</li>
-                        <li><strong>.row</strong>s are horizontal groupings of <strong>.spanX</strong> containers, they can exceed 12 units (they'll just wrap)</li>
-                        <li><strong>.row</strong>s can be nested within <strong>.spanX</strong> classes, but not <strong>.box</strong>s</li>
+                        <li>RAWR uses a 12 column span with <code>.spanX</code> style classes</li>
+                        <li>A <code>.row</code>is a horizontal groupings of <code>.spanX</code> containers. It is OK if theyexceed 12 units, they'll just wrap</li>
+                        <li><code>.row</code>s can be nested within <code>.spanX</code> classes, but not <code>.box</code>s</li>
                     </ul>
                 </div>
                 <div class="span12">
@@ -313,12 +339,12 @@ The &lt;code&gt;code element&lt;/code&gt; example
                     <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
 
                     <pre><code>&lt;html>
-        &lt;head>
-        &lt;/head>
-        &lt;body>
-            &lt;div class="main"> &lt;div>
-        &lt;/body>
-    &lt;/html></code></pre>
+    &lt;head>
+    &lt;/head>
+    &lt;body>
+        &lt;div class="main"> &lt;div>
+    &lt;/body>
+&lt;/html></code></pre>
 
                     <h3>blockquote</h3>
 
@@ -484,18 +510,6 @@ The &lt;code&gt;code element&lt;/code&gt; example
 
                             <p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
                             <p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Clickable inputs and buttons</legend>
-                            <p><input type="image" src="http://placekitten.com/90/24" alt="Image (input)"></p>
-                            <p><input type="reset" value="Reset (input)"></p>
-                            <p><input type="button" value="Button (input)"></p>
-                            <p><input type="submit" value="Submit (input)"></p>
-
-                            <p><button type="reset">Reset (button)</button></p>
-                            <p><button type="button">Button (button)</button></p>
-                            <p><button type="submit">Submit (button)</button></p>
                         </fieldset>
                     </form>
                     <!-- END -->
