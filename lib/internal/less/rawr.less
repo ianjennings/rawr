@@ -199,7 +199,8 @@
 }
 .inline {
   display: inline-block;
-  .no-margin-vertical;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 .float-left {
   float: left;
@@ -328,6 +329,7 @@
 }
 
 .unstyled {
+  .no-padding-left;
   list-style-type: none;
 }
 .muted {
@@ -372,7 +374,6 @@ span {
   font-size: @reading-font-size;
 }
 ol, ul {
-  .no-padding-horizontal;
   .margin-vertical;
   li {
     margin: @unit 0px;
