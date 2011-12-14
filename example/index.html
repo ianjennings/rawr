@@ -11,75 +11,270 @@
     </head>
     <body>
         <div class="row">
-            <div class="span12">
-                <div class="box">
-                    <h1 class="inline">RAWR!</h1>
+            <section>
+                <div class="solid box large-margin-vertical">
+                    <h1>RAWR!</h1>
                     <hr />
-                    <h4 class="inline muted">Make Your Design Scream</h4>
+                    <h4 class="muted">Design with Dinosaurs</h4>
                 </div>
+            </section>
+            <section>
+                <h1>Tutorial</h1>
+                <h2>A Puzzle</h2>
+                <p>
+                    Imagine you're in charge of laying out the dinosaur cages for <a href="http://www.imdb.com/title/tt0107290/">Jurrasic Park</a>. There are all types of dinosaurs. Some are big, some are small, some are angry, some are nice. 
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            You have a couple huge angry dinosaurs. These are very <strong>attention grabbing</strong>. They should have plenty of room in their cage, and extra space around their cage. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            You also have thousands of cute little dinosaurs, but only a few different types. These dinosaurs <small>don't need much room</small> in their cage and can be put close to one another.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                           Finally, there are hundreds random dinosaurs. You can assume they can be placed in the same size cage and equal distances from each other without a problem.
+                        </p>
+                    </li>
+                </ol>
+                <p>
+                    How would you design the park?
+                </p>
+            </section>
+            <section>
+                <h2>The Solution</h2>
+                <p>
+                    The goal of this puzzle is to help explain the <a href="http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm" />Gestalt Principles</a>.
+                </p>
+                <blockquote>
+                    <p>
+                        Gestalt is a psychology term which means "unified whole". It refers to theories of visual perception developed by German psychologists in the 1920s. These theories attempt to describe how people tend to organize visual elements into groups or unified wholes when certain principles are applied.
+                    </p>
+                    <caption>http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm</caption>
+                </blockquote>
+                <p>
+                    The most important thing to think about here are the rules that govern the puzzle. For example: attention grabbing dinosaurs need lots of space in their cage and should be kept far away from other dinosaurs.
+                </p>
+                <p>
+                    The spacing rules presented in this puzzle are a systematic way of applying Gestalt principles to design. These rules can be applied to anything, not just dinosaurs in cages. They can be summarized in the three following rules:
+                </p>
                 <hr class="space" />
-                <p>RAWR! can be thought of as a framework to help developers design websites. It was developed during the creation of <a href="http://hackerleague.org">Hacker League</a> by me, <a href="http://twitter.com/meetjennings">Ian Jennings</a>. It is a full implementation of ideas presented in <a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong">this slideshow</a> by <a href="http://twitter.com/wolfr_">Johan Ronsse</a> bundled with a few extras to help get you designing quickly.</p>
+                <ol>
+                    <li>
+                        <hgroup>
+                            <h4>A Few Big Things Grab Attention</h4>
+                            <h6>Bigger objects take up more real estate and are easy to notice.</h6>
+                        </hgroup>
+                        <p>
+                            You would probably put the biggest most interesting dinosaur near the entrance of your park, far away from any other dinosaurs.
+                        </p>
+                    </li>
+                    <li>
+                        <hgroup>
+                            <h4>Lots of Small Things Should Be Grouped</h4>
+                            <h6>Organizing objects in groups means they are the same kind and makes them easy to find.</h6>
+                        </hgroup>
+                        <p>
+                            To make the best use of space and organization, you would probably group each of the thousands of small dinosaurs by type.
+                        </p>
+                    </li>
+                    <li>
+                        <hgroup>
+                            <h4>Everything Else Is The Just About The Same</h4>
+                            <h6>All other objects should be treated the same way so it easy to tell the difference between them.</h6>
+                        </hgroup>
+                        <p>
+                            The hundreds of random dinosaurs would be organized as best as possible, with related dinosaurs close by.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h2>Spacing Principles</h2>
+                <p>
+                    If we keep these rules in mind while designing, we can develop a nice looking site just by being consistent. 
+                </p>
+                <p>
+                    Let's start with text in paragraphs. The following two paragraphs look like they are associated with each other because they are in close proximity and form a group.
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <div class="example box">
+                            <p>Dinosaurs diverged from their archosaur ancestors approximately 230 million years ago during the Middle to Late Triassic period, roughly 20 million years after the Permian–Triassic extinction event wiped out an estimated 95% of all life on Earth.</p>
+                            <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    We can see that by default, the RAWR framework associates elements with one another. This is exactly the same as the default browser stylesheet.
+                </p>
+                <p>
+                    These paragraphs are actually about different subjects; the first is about dinosaur origins and the second is about evolution. We can label these paragraphs with an <code>h4</code> tag. This is a fourth level heading and is used for indicating large titles or labels.
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <div class="example box">
+                            <h4>Origins</h4>
+                            <p>Dinosaurs diverged from their archosaur ancestors approximately 230 million years ago during the Middle to Late Triassic period, roughly 20 million years after the Permian–Triassic extinction event wiped out an estimated 95% of all life on Earth.</p>
+                            <h4>Evolution</h4>
+                            <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    As you can see, these elements <strong>still</strong> flow into one another. Even though there are two headings, the set of 4 elements still seems to be under one group. Again, this is because they are close to each other.
+                </p>
+                <p>
+                    This is because RAWR! treats elements as <em>having</em> margins rather than <em>setting</em> margins. This is actually how the default HTML5 stylesheet renders elements.
+                </p>
+                <p>
+                    It is common to style elements relative to one another, meaning "put the T-Rex 20 meters away from the Triceratops". In reality, we want to say "put the T-Rex 20 meters away from everything! That monster is scary!"
+                </p>
+                <p>
+                    Let's try and separate the two portions of content while maintaining one group. To do this, we can use the new HTML5 tag called <code>section</code> to part the paragraphs, while wrapping the entire thing in an <code>article</code> tag.
+                <div class="row">
+                    <div class="span12">
+                        <div class="example box">
+                            <article>
+                                <section>
+                                    <h4>Origins</h4>
+                                    <p>Dinosaurs diverged from their archosaur ancestors approximately 230 million years ago during the Middle to Late Triassic period, roughly 20 million years after the Permian–Triassic extinction event wiped out an estimated 95% of all life on Earth.</p>
+                                </section>
+                                <section>
+                                    <h4>Evolution</h4>
+                                    <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
+                                </section>
+                            <article>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    This looks much better! This worked as expected because we essentially took what was considered a single group of paragraphs and headings and semantically separated them into two different groups of paragraphs and headings.
+                </p>
+                <p>
+                    As you can see, the spacing between each section is exactly twice that of the spacing between a heading and paragraph. Every element in RAWR! uses three levels of standardized spacing, as you can read about in the docs.
+                </p>
+                <p>
+                    Let's add a header to the example.
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <div class="example box">
+                            <article>
+                                <h3>Dinosaur History</h3>
+                                <section>
+                                    <h4>Origins</h4>
+                                    <p>Dinosaurs diverged from their archosaur ancestors approximately 230 million years ago during the Middle to Late Triassic period, roughly 20 million years after the Permian–Triassic extinction event wiped out an estimated 95% of all life on Earth.</p>
+                                </section>
+                                <section>
+                                    <h4>Evolution</h4>
+                                    <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    We can see that the header element is just as evenly spaced from the first section as each section is from one another. This is because, again, the section is enforcing the margin.
+                </p>
+                <p>
+                    Vertical margins do not collide with each other. Unlike padding, margins can share vertical space. When two margins are applied in the same direction, the larger margin value is used.
+                </p>
+                <p>
+                    In this case, we have a section that has twice the margin of a header. Because each section has consistent margins, groups of sections appear to be associated with each other.
+                </p>
+                <div class="row">
+                    <div class="span12">
+                        <div class="example box">
+                            <div class="solid box large-padding-horizontal">
+                                <article>
+                                    <h3>Dinosaur History</h3>
+                                    <section>
+                                        <h4>Origins</h4>
+                                        <p>Dinosaurs diverged from their archosaur ancestors approximately 230 million years ago during the Middle to Late Triassic period, roughly 20 million years after the Permian–Triassic extinction event wiped out an estimated 95% of all life on Earth.</p>
+                                    </section>
+                                    <section>
+                                        <h4>Evolution</h4>
+                                        <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
+                                    </section>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    As you can see, we can simply put this in a <code>div</code> with a <code>.box</code> class, and the spacing stays exactly the same! Continue on to the next section of the tutorial to learn about how to modify spacing.
+                </p>
+                <h3>Note</h3>
+                <p>
+                    The current browser recommended stylesheet does not have a modern look, but enforces good design principles. This framework overwrites the default stylesheet, applies default html5 styles, and then standardizes margins and padding as well as applies additional styles.
+                </p>
+                <h3>Note</h3>
+                <p>
+                    There is a lot more to the design of a web page, but spacing is by far the most important principle. Everything will look poor if your spacing is not correct, no matter how flashy or colorful. Think about the improving quality of website design now that grid systems are commonplace.
+                </p>
+                <p>RAWR! can be thought of as a framework to help developers design websites. It was developed during the creation of <a href="http://hackerleague.org">Hacker League</a> by me, <a href="http://twitter.com/meetjennings">Ian Jennings</a>. It is a full implementation of ideas presented in <a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong">this slideshow</a> by <a href="http://twitter.com/wolfr-">Johan Ronsse</a> bundled with a few extras to help get you designing quickly.</p>
                 <hr class="space" />
-                <h4>You'll probably be interested in RAWR! if:</h4>
+                <h4>You'll be interested in RAWR! if:</h4>
                 <ul>
                     <li>You would prefer using an IDE rather than opening Photoshop or Illustrator <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
                     <li>You write scripts to solve problems <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/44">#44</a></sup></li>
                     <li>You want your design to look passable without the intervention of a dedicated designer <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/43">#43</a></sup></li>
                 </ul>
                 <hr class="space" />
-                <h2>Some RAWR guidelines</h2>
-                <ul>
-                    <li>
-                        Margins
-                        <ul>
-                            <li>
-                                Use margins to distance elements from other elements
-                                <ul>
-                                    <li>Close elements are associated with one another</li>
-                                    <li>Use <code>.small_space</code> for closely related elements</li>
-                                </ul>
-                            </li>
-                            <li>Every element has an equal top and bottom margin by default</li>
-                            <li>These margins can be modified with an assortment of spacing classes</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Padding
-                        <ul>
-                            <li>Use padding to distance the contents of the element from it's border</li>
-                            <li>Padding is very rarely used without a <code>background</code></li>
-                            <li>If you don't have a background, you probably want margins instead</li>
-                        </ul>
-                    </li>
-                </ul>
                 <hr class="large space" />
+                <h2>Typical Navigation Setup</h2>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <hr />
+                <p>This is not part of that</p>
+                <header>
+                    <hgroup>
+                        <h1>Heading 1 (in hgroup)</h1>
+                        <h2>Heading 2 (in hgroup)</h2>
+                    </hgroup>
+                    <nav>
+                        <ul>
+                            <li><a href="#">navigation item #1</a></li>
+                            <li><a href="#">navigation item #2</a></li>
+                            <li><a href="#">navigation item #3</a></li>
+                        </ul>
+                    </nav>
+                </header>
                 <h2>Typography</h2>
                 <hr />
                 <hr class="space" />
                 <h3 class="inline">Paragraphs</h3>
-            </div>
-            <div class="span7">
+            <div class="span9">
                 <h4>Example</h4>
                 <p>
                 Wayfarers organic thundercats, mcsweeney's vinyl bicycle rights irony salvia lo-fi portland williamsburg mlkshk before they sold out craft beer. Farm-to-table you probably haven't heard of them etsy, banh mi four loko banksy helvetica. Freegan twee craft beer dreamcatcher, +1 hoodie mcsweeney's lomo brooklyn leggings next level. Wolf iphone lo-fi seitan mustache. Wayfarers trust fund portland bicycle rights american apparel twee. Leggings twee four loko, marfa fixie irony mlkshk williamsburg DIY echo park put a bird on it readymade vinyl. Quinoa chambray tattooed, brooklyn dreamcatcher aesthetic cliche tumblr gluten-free.
                 </p>
             </div>
-            <div class="span5">
-                <h5>Code</h5>
+            <div class="span7">
+                <h4>Code</h4>
                 <pre><code>&lt;h4&gt;Paragraphs&lt;/h4&gt;
 &lt;p&gt;
     Wayfarers...
 &lt;/p&gt;</code></pre>
-                <h5>Notes</h5>
+                <h4>Notes</h4>
                 <ul>
                     <li>Try to keep paragraphs less than 60 characters per line <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/68">#68</a></sup></li>
                 </ul>
             </div>
-            <div class="span12">
+            <div class="span16">
                 <hr class="space" />
                 <h3 class="inline">Type</h3>
             </div>
-            <div class="span7">
+            <div class="span9">
                 <h4>Examples</h4>
                 <address>Address: somewhere, world</address>
                 <p>
@@ -108,8 +303,8 @@
                 The <u>u element</u> example
                 </p>
             </div>
-            <div class="span5">
-                <h5>Code</h5>
+            <div class="span7">
+                <h4>Code</h4>
                 <pre><code>&lt;address&gt;Address: somewhere, world&lt;/address&gt;
 &lt;p&gt;
 The &lt;a href=&quot;#&quot;&gt;a element&lt;/a&gt; example
@@ -125,148 +320,177 @@ The &lt;code&gt;code element&lt;/code&gt; example
 ...
 &lt;/p&gt;</code></pre>
             </div>
-            <div id="span_example">
-                <div class="span12">
+            <div id="span-example">
+                <div class="span16">
                     <hr class="space" />
                     <h2>Grid System</h2>
                     <hr />
-                    <h4>Example</h4>
+                    <h4>Understanding The Grid</h4>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span1">
-                    <div class="box">1</div>
+                    <div class="solid box">1</div>
+                </div>
+                <div class="span1">
+                    <div class="solid box">1</div>
+                </div>
+                <div class="span1">
+                    <div class="solid box">1</div>
+                </div>
+                <div class="span1">
+                    <div class="solid box">1</div>
+                </div>
+                <div class="span1">
+                    <div class="solid box">1</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span2">
-                    <div class="box">2</div>
+                    <div class="solid box">2</div>
+                </div>
+                <div class="span2">
+                    <div class="solid box">2</div>
+                </div>
+                <div class="span2">
+                    <div class="solid box">2</div>
                 </div>
                 <div class="span3">
-                    <div class="box">3</div>
+                    <div class="solid box">3</div>
                 </div>
                 <div class="span3">
-                    <div class="box">3</div>
+                    <div class="solid box">3</div>
                 </div>
                 <div class="span3">
-                    <div class="box">3</div>
+                    <div class="solid box">3</div>
                 </div>
                 <div class="span3">
-                    <div class="box">3</div>
+                    <div class="solid box">3</div>
+                </div>
+                <div class="span3">
+                    <div class="solid box">3</div>
+                </div>
+                <div class="span1">
+                    <div class="solid box">1</div>
+                </div>
+                <div class="span16">
+                    <hr class="space" />
+                    <h4>Common Layouts</h4>
                 </div>
                 <div class="span4">
-                    <div class="box">4</div>
+                    <div class="solid box">4</div>
                 </div>
                 <div class="span4">
-                    <div class="box">4</div>
+                    <div class="solid box">4</div>
                 </div>
                 <div class="span4">
-                    <div class="box">4</div>
-                </div>
-                <div class="span6">
-                    <div class="box">6</div>
-                </div>
-                <div class="span6">
-                    <div class="box">6</div>
-                </div>
-                <div class="span9">
-                    <div class="box">9</div>
-                </div>
-                <div class="span3">
-                    <div class="box">3</div>
+                    <div class="solid box">4</div>
                 </div>
                 <div class="span4">
-                    <div class="box">4</div>
+                    <div class="solid box">4</div>
                 </div>
                 <div class="span8">
-                    <div class="box">8</div>
+                    <div class="solid box">8</div>
                 </div>
-                <div class="span7">
+                <div class="span4">
+                    <div class="solid box">4</div>
+                </div>
+                <div class="span4">
+                    <div class="solid box">4</div>
+                </div>
+                <div class="span4">
+                    <div class="solid box">4</div>
+                </div>
+                <div class="span12">
+                    <div class="solid box">12</div>
+                </div>
+            </div>
+                <div class="span9">
                     <h4>Code</h4>
                     <h6>Two Equal Columns Layout</h6>
                     <pre><code>&lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;span6&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
+    &lt;div class=&quot;solid box&quot;&gt;6&lt;/div&gt;
         &lt;/div&gt;
     &lt;div class=&quot;span6&quot;&gt;
-        &lt;div class=&quot;box&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;solid box&quot;&gt;6&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
-                <div class="span5">
+                <div class="span7">
                     <h4>Notes</h4>
                     <ul>
                         <li>RAWR uses a 12 column span with <code>.spanX</code> style classes</li>
                         <li>A <code>.row</code>is a horizontal groupings of <code>.spanX</code> containers. It is OK if theyexceed 12 units, they'll just wrap</li>
-                        <li><code>.row</code>s can be nested within <code>.spanX</code> classes, but not <code>.box</code>s</li>
+                        <li><code>.row</code>s can be nested within <code>.spanX</code> classes, but not <code>.solid box</code>s</li>
                     </ul>
                 </div>
-                <div class="span12">
+                <div class="span16">
                     <h3>Pills</h3>
                     <ul class="pills">
                         <li class="selected"><a href="#">Home</a></li>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Friends</a></li>
                     </ul>
-                    <ul class="pills flat">
+                    <ul class="pills inline">
                         <li class="selected"><a href="#">Home</a></li>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Friends</a></li>
                     </ul>
                     <h3>Buttons</h3>
-                    <ul class="buttons">
+                    <ul class="buttons unstyled">
                         <li><a href="#" class="commit button">Commit</a> &#8212; save something</li>
                         <li><a href="#" class="discard button">Discard</a> &#8212; remove something</li>
                         <li><a href="#" class="explain button">Explain</a> &#8212; explain something</li>
                         <li><a href="#" class="action button">Action</a> &#8212; do something like "sign up" or "create new post"</li>
                         <li><a href="#" class="button">Default</a> &#8212; do something else</li>
                     </ul>
-                    <div class="box">
-                        <ul class="inline buttons flat">
+                    <div class="solid box">
+                        <ul class="inline buttons inline margin-vertical">
                             <li><a href="#" class="button">Default</a></li>
                             <li><a href="#" class="commit button">Commit</a></li>
                             <li><a href="#" class="discard button">Delete</a></li>
@@ -274,37 +498,17 @@ The &lt;code&gt;code element&lt;/code&gt; example
                             <li><a href="#" class="action button">Close</a></li>
                         </ul>
                     </div>
-                    <div class="left_right">
+                    <div class="left-right">
                         <div class="left">
                             <span><a href="#">Forgot Password?</a></span>
                         </div>
                         <div class="right">
-                            <ul class="inline buttons flat float_right">
+                            <ul class="inline buttons no-margin-vertical float-right">
                                 <li><a href="#" class="action button">Sign In</a></li>
                                 <li><a href="#" class="button">Close</a></li>
                             </ul>
                         </div>
                     </div>
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h6>Heading 6</h6>
-
-                    <header>
-                        <hgroup>
-                            <h1>Heading 1 (in hgroup)</h1>
-                            <h2>Heading 2 (in hgroup)</h2>
-                        </hgroup>
-                        <nav>
-                            <ul>
-                                <li><a href="#">navigation item #1</a></li>
-                                <li><a href="#">navigation item #2</a></li>
-                                <li><a href="#">navigation item #3</a></li>
-                            </ul>
-                        </nav>
-                    </header>
 
                     <p hidden>This should be hidden in all browsers, apart from IE6</p>
 
@@ -374,6 +578,53 @@ The &lt;code&gt;code element&lt;/code&gt; example
                         <li>list item 1</li>
                         <li>list item 1</li>
                     </ol>
+
+                    <h3>ordered list (.inline)</h3>
+
+                    <ol class="inline">
+                        <li>list item 1</li>
+                        <li>list item 1
+                            <ol>
+                                <li>list item 2</li>
+                                <li>list item 2
+                                    <ol>
+                                        <li>list item 3</li>
+                                        <li>list item 3</li>
+                                    </ol>
+                                </li>
+                                <li>list item 2</li>
+                                <li>list item 2</li>
+                            </ol>
+                        </li>
+                        <li>list item 1</li>
+                        <li>list item 1</li>
+                    </ol>
+
+                    <h3>use debug to find out whats going on</h3>
+                    <ul class="debug">
+                        <li>
+                            Margins
+                            <ul>
+                                <li>
+                                    Use margins to distance elements from other elements
+                                    <ul>
+                                        <li>Close elements are associated with one another</li>
+                                        <li>Use <code>.small-space</code> for closely related elements</li>
+                                    </ul>
+                                </li>
+                                <li>Every element has an equal top and bottom margin by default</li>
+                                <li>These margins can be modified with an assortment of spacing classes</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Padding
+                            <ul>
+                                <li>Use padding to distance the contents of the element from it's border</li>
+                                <li>Padding is very rarely used without a <code>background</code></li>
+                                <li>If you don't have a background, you probably want margins instead</li>
+                            </ul>
+                        </li>
+                    </ul>
 
                     <h3>unordered list</h3>
 
@@ -473,9 +724,9 @@ The &lt;code&gt;code element&lt;/code&gt; example
                             <p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></p>
 
                             <p><label for="irb">Radio input</label> <input type="radio" id="irb" name="rad"></p>
-                            <p><label for="icb">Checkbox input</label> <input type="checkbox" id="icb"></p>
+                            <p><label for="icb">Checksolid box input</label> <input type="checksolid box" id="icb"></p>
                             <p><input type="radio" id="irb2" name="rad"> <label for="irb2">Radio input</label></p>
-                            <p><input type="checkbox" id="icb2"> <label for="icb2">Checkbox input</label></p>
+                            <p><input type="checksolid box" id="icb2"> <label for="icb2">Checksolid box input</label></p>
 
                             <p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
                             <p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
@@ -506,14 +757,14 @@ The &lt;code&gt;code element&lt;/code&gt; example
                             <p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></p>
 
                             <p><label for="irb">Radio input</label> <input type="radio" id="irb" name="rad"></p>
-                            <p><label for="icb">Checkbox input</label> <input type="checkbox" id="icb"></p>
+                            <p><label for="icb">Checksolid box input</label> <input type="checksolid box" id="icb"></p>
 
                             <p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
                             <p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
                         </fieldset>
                     </form>
                     <!-- END -->
-                </div>
+                </section>
             </div>
         </div>
     </body>
