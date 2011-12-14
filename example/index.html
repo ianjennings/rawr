@@ -22,7 +22,7 @@
                 <h1>Tutorial</h1>
                 <h2>A Puzzle</h2>
                 <p>
-                    Imagine you're in charge of laying out the dinosaur cages for <a href="http://www.imdb.com/title/tt0107290/">Jurrasic Park</a>. There are all types of dinosaurs. Some are big, some are small, some are angry, some are nice. 
+                    Imagine you're in charge of laying out the dinosaur cages for <a href="http://www.imdb.com/title/tt0107290/">Jurrasic Park</a>. There are all types of dinosaurs. Some are big, some are small, some are angry, and some are nice. 
                 </p>
                 <ol>
                     <li>
@@ -108,6 +108,11 @@
                             <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
                         </div>
                     </div>
+                    <div class="span4">
+                        <h4>Code</h4>
+                        <pre><code>&lt;p&gt;Dinosaurs diverged from...&lt;/p&gt;
+                            &lt;p&gt;Dinosaur evolution after...&lt;/p&gt;</code></pre>
+                    </div>
                 </div>
                 <p>
                     We can see that by default, the RAWR framework associates elements with one another. This is exactly the same as the default browser stylesheet.
@@ -123,6 +128,13 @@
                             <h4>Evolution</h4>
                             <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
                         </div>
+                    </div>
+                    <div class="span4">
+                        <h4>Code</h4>
+                        <pre><code>&lt;h4&gt;Origins&lt;/h4&gt;
+                            &lt;p&gt;Dinosaurs diverged from...&lt;/p&gt;
+                            &lt;h4&gt;Evolution&lt;/h4&gt;
+                            &lt;p&gt;Dinosaur evolution after...&lt;/p&gt;</code></pre>
                     </div>
                 </div>
                 <p>
@@ -148,8 +160,21 @@
                                     <h4>Evolution</h4>
                                     <p>Dinosaur evolution after the Triassic follows changes in vegetation and the location of continents. In the Late Triassic and Early Jurassic, the continents were connected as the single landmass Pangaea, and there was a worldwide dinosaur fauna mostly composed of coelophysoid carnivores and prosauropod herbivores.</p>
                                 </section>
-                            <article>
+                            </article>
                         </div>
+                    </div>
+                    <div class="span4">
+                        <h4>Code</h4>
+                        <pre><code>&lt;article&gt;
+                                &lt;section&gt;
+                                    &lt;h4&gt;Origins&lt;/h4&gt;
+                                    &lt;p&gt;Dinosaurs diverged from...&lt;/p&gt;
+                                &lt;/section&gt;
+                                &lt;section&gt;
+                                    &lt;h4&gt;Evolution&lt;/h4&gt;
+                                    &lt;p&gt;Dinosaur evolution after...&lt;/p&gt;
+                                &lt;/section&gt;
+                            &lt;/article&gt;</code></pre>
                     </div>
                 </div>
                 <p>
@@ -177,6 +202,20 @@
                             </article>
                         </div>
                     </div>
+                    <div class="span4">
+                        <h4>Code</h4>
+                        <pre><code>&lt;h3&gt;Dinosaur History&lt;/h3&gt;
+                            &lt;article&gt;
+                                &lt;section&gt;
+                                    &lt;h4&gt;Origins&lt;/h4&gt;
+                                    &lt;p&gt;Dinosaurs diverged from...&lt;/p&gt;
+                                &lt;/section&gt;
+                                &lt;section&gt;
+                                    &lt;h4&gt;Evolution&lt;/h4&gt;
+                                    &lt;p&gt;Dinosaur evolution after...&lt;/p&gt;
+                                &lt;/section&gt;
+                            &lt;/article&gt;</code></pre>
+                    </div>
                 </div>
                 <p>
                     We can see that the header element is just as evenly spaced from the first section as each section is from one another. This is because, again, the section is enforcing the margin.
@@ -190,7 +229,7 @@
                 <div class="row">
                     <div class="span12">
                         <div class="example box">
-                            <div class="solid box large-padding-horizontal">
+                            <div class="solid box">
                                 <article>
                                     <h3>Dinosaur History</h3>
                                     <section>
@@ -204,6 +243,22 @@
                                 </article>
                             </div>
                         </div>
+                    </div>
+                    <div class="span4">
+                        <h4>Code</h4>
+                        <pre><code>&lt;div class=&quot;solid box&quot;&gt;
+                                &lt;article&gt;
+                                    &lt;h3&gt;Dinosaur History&lt;/h3&gt;
+                                    &lt;section&gt;
+                                        &lt;h4&gt;Origins&lt;/h4&gt;
+                                        &lt;p&gt;Dinosaurs diverged from...&lt;/p&gt;
+                                    &lt;/section&gt;
+                                    &lt;section&gt;
+                                        &lt;h4&gt;Evolution&lt;/h4&gt;
+                                        &lt;p&gt;Dinosaur evolution after...&lt;/p&gt;
+                                    &lt;/section&gt;
+                                &lt;/article&gt;
+                            &lt;/div&gt;</code></pre>
                     </div>
                 </div>
                 <p>
@@ -249,226 +304,140 @@
                         </ul>
                     </nav>
                 </header>
+                <hr class="space" />
                 <h2>Typography</h2>
                 <hr />
-                <hr class="space" />
                 <h3 class="inline">Paragraphs</h3>
-            <div class="span9">
-                <h4>Example</h4>
-                <p>
-                Wayfarers organic thundercats, mcsweeney's vinyl bicycle rights irony salvia lo-fi portland williamsburg mlkshk before they sold out craft beer. Farm-to-table you probably haven't heard of them etsy, banh mi four loko banksy helvetica. Freegan twee craft beer dreamcatcher, +1 hoodie mcsweeney's lomo brooklyn leggings next level. Wolf iphone lo-fi seitan mustache. Wayfarers trust fund portland bicycle rights american apparel twee. Leggings twee four loko, marfa fixie irony mlkshk williamsburg DIY echo park put a bird on it readymade vinyl. Quinoa chambray tattooed, brooklyn dreamcatcher aesthetic cliche tumblr gluten-free.
-                </p>
-            </div>
-            <div class="span7">
-                <h4>Code</h4>
-                <pre><code>&lt;h4&gt;Paragraphs&lt;/h4&gt;
-&lt;p&gt;
-    Wayfarers...
-&lt;/p&gt;</code></pre>
-                <h4>Notes</h4>
-                <ul>
-                    <li>Try to keep paragraphs less than 60 characters per line <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/68">#68</a></sup></li>
-                </ul>
-            </div>
-            <div class="span16">
-                <hr class="space" />
-                <h3 class="inline">Type</h3>
-            </div>
-            <div class="span9">
-                <h4>Examples</h4>
-                <address>Address: somewhere, world</address>
-                <p>
-                The <a href="#">a element</a> example<br>
-                The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
-                The <b>b element</b> example<br>
-                The <cite>cite element</cite> example<br>
-                The <code>code element</code> example<br>
-                The <del>del element</del> example<br>
-                The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
-                The <em>em element</em> example<br>
-                The <i>i element</i> example<br>
-                The img element <img src="http://placekitten.com/16/16" alt=""> example<br>
-                The <ins>ins element</ins> example<br>
-                The <kbd>kbd element</kbd> example<br>
-                The <mark>mark element</mark> example<br>
-                The <q>q element <q>inside</q> a q element</q> example<br>
-                The <s>s element</s> example<br>
-                The <samp>samp element</samp> example<br>
-                The <small>small element</small> example<br>
-                The <span>span element</span> example<br>
-                The <strong>strong element</strong> example<br>
-                The <sub>sub element</sub> example<br>
-                The <sup>sup element</sup> example<br>
-                The <var>var element</var> example<br>
-                The <u>u element</u> example
-                </p>
-            </div>
-            <div class="span7">
-                <h4>Code</h4>
-                <pre><code>&lt;address&gt;Address: somewhere, world&lt;/address&gt;
-&lt;p&gt;
-The &lt;a href=&quot;#&quot;&gt;a element&lt;/a&gt; example
-&lt;br&gt;
-The &lt;abbr&gt;abbr element&lt;/abbr&gt; example
-&lt;br&gt;
-The &lt;b&gt;b element&lt;/b&gt; example
-&lt;br&gt;
-The &lt;cite&gt;cite element&lt;/cite&gt; example
-&lt;br&gt;
-The &lt;code&gt;code element&lt;/code&gt; example
-&lt;br&gt;
-...
-&lt;/p&gt;</code></pre>
-            </div>
-            <div id="span-example">
-                <div class="span16">
-                    <hr class="space" />
-                    <h2>Grid System</h2>
-                    <hr />
-                    <h4>Understanding The Grid</h4>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="span9">
+                        <h4>Example</h4>
+                        <p>
+                        Wayfarers organic thundercats, mcsweeney's vinyl bicycle rights irony salvia lo-fi portland williamsburg mlkshk before they sold out craft beer. Farm-to-table you probably haven't heard of them etsy, banh mi four loko banksy helvetica. Freegan twee craft beer dreamcatcher, +1 hoodie mcsweeney's lomo brooklyn leggings next level. Wolf iphone lo-fi seitan mustache. Wayfarers trust fund portland bicycle rights american apparel twee. Leggings twee four loko, marfa fixie irony mlkshk williamsburg DIY echo park put a bird on it readymade vinyl. Quinoa chambray tattooed, brooklyn dreamcatcher aesthetic cliche tumblr gluten-free.
+                        </p>
+                    </div>
+                    <div class="span7">
+                        <h4>Code</h4>
+                        <pre><code>&lt;h4&gt;Paragraphs&lt;/h4&gt;
+        &lt;p&gt;
+            Wayfarers...
+        &lt;/p&gt;</code></pre>
+                        <h4>Notes</h4>
+                        <ul>
+                            <li>Try to keep paragraphs less than 60 characters per line <sup><a href="http://www.slideshare.net/Wolfr/design-for-developersonlineversionlong/68">#68</a></sup></li>
+                        </ul>
+                    </div>
+                    <div class="span16">
+                        <h3>Type</h3>
+                    </div>
+                    <div class="span9">
+                        <h4>Examples</h4>
+                        <address>Address: somewhere, world</address>
+                        <p>
+                        The <a href="#">a element</a> example<br>
+                        The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+                        The <b>b element</b> example<br>
+                        The <cite>cite element</cite> example<br>
+                        The <code>code element</code> example<br>
+                        The <del>del element</del> example<br>
+                        The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+                        The <em>em element</em> example<br>
+                        The <i>i element</i> example<br>
+                        The img element <img src="http://placekitten.com/16/16" alt=""> example<br>
+                        The <ins>ins element</ins> example<br>
+                        The <kbd>kbd element</kbd> example<br>
+                        The <mark>mark element</mark> example<br>
+                        The <q>q element <q>inside</q> a q element</q> example<br>
+                        The <s>s element</s> example<br>
+                        The <samp>samp element</samp> example<br>
+                        The <small>small element</small> example<br>
+                        The <span>span element</span> example<br>
+                        The <strong>strong element</strong> example<br>
+                        The <sub>sub element</sub> example<br>
+                        The <sup>sup element</sup> example<br>
+                        The <var>var element</var> example<br>
+                        The <u>u element</u> example
+                        </p>
+                    </div>
+                    <div class="span7">
+                        <h4>Code</h4>
+                        <pre><code>&lt;address&gt;Address: somewhere, world&lt;/address&gt;
+        &lt;p&gt;
+        The &lt;a href=&quot;#&quot;&gt;a element&lt;/a&gt; example
+        &lt;br&gt;
+        The &lt;abbr&gt;abbr element&lt;/abbr&gt; example
+        &lt;br&gt;
+        The &lt;b&gt;b element&lt;/b&gt; example
+        &lt;br&gt;
+        The &lt;cite&gt;cite element&lt;/cite&gt; example
+        &lt;br&gt;
+        The &lt;code&gt;code element&lt;/code&gt; example
+        &lt;br&gt;
+        ...
+        &lt;/p&gt;</code></pre>
+                    </div>
                 </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span2">
-                    <div class="solid box">2</div>
-                </div>
-                <div class="span3">
-                    <div class="solid box">3</div>
-                </div>
-                <div class="span3">
-                    <div class="solid box">3</div>
-                </div>
-                <div class="span3">
-                    <div class="solid box">3</div>
-                </div>
-                <div class="span3">
-                    <div class="solid box">3</div>
-                </div>
-                <div class="span3">
-                    <div class="solid box">3</div>
-                </div>
-                <div class="span1">
-                    <div class="solid box">1</div>
-                </div>
-                <div class="span16">
-                    <hr class="space" />
-                    <h4>Common Layouts</h4>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span8">
-                    <div class="solid box">8</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span4">
-                    <div class="solid box">4</div>
-                </div>
-                <div class="span12">
-                    <div class="solid box">12</div>
-                </div>
-            </div>
-                <div class="span9">
-                    <h4>Code</h4>
-                    <h6>Two Equal Columns Layout</h6>
-                    <pre><code>&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;span6&quot;&gt;
-    &lt;div class=&quot;solid box&quot;&gt;6&lt;/div&gt;
-        &lt;/div&gt;
+            </section>
+            <section>
+                    <div id="span-example" class="span16">
+                        <hr class="space" />
+                        <h2>Grid System</h2>
+                        <hr />
+                        <h4>Understanding The Grid</h4>
+                    </div>
+                    <div class="span16">
+                        <h4>Common Grid Layouts</h4>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span8">
+                        <div class="solid box">8</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span4">
+                        <div class="solid box">4</div>
+                    </div>
+                    <div class="span12">
+                        <div class="solid box">12</div>
+                    </div>
+                    <div class="span9">
+                        <h4>Code</h4>
+                        <h6>Two Equal Columns Layout</h6>
+                        <pre><code>&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;span6&quot;&gt;
         &lt;div class=&quot;solid box&quot;&gt;6&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-                <div class="span7">
-                    <h4>Notes</h4>
-                    <ul>
-                        <li>RAWR uses a 12 column span with <code>.spanX</code> style classes</li>
-                        <li>A <code>.row</code>is a horizontal groupings of <code>.spanX</code> containers. It is OK if theyexceed 12 units, they'll just wrap</li>
-                        <li><code>.row</code>s can be nested within <code>.spanX</code> classes, but not <code>.solid box</code>s</li>
-                    </ul>
-                </div>
+            &lt;/div&gt;
+        &lt;div class=&quot;span6&quot;&gt;
+            &lt;div class=&quot;solid box&quot;&gt;6&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="span7">
+                        <h4>Notes</h4>
+                        <ul>
+                            <li>RAWR uses a 12 column span with <code>.spanX</code> style classes</li>
+                            <li>A <code>.row</code>is a horizontal groupings of <code>.spanX</code> containers. It is OK if theyexceed 12 units, they'll just wrap</li>
+                            <li><code>.row</code>s can be nested within <code>.spanX</code> classes, but not <code>.solid box</code>s</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
                 <div class="span16">
                     <h3>Pills</h3>
                     <ul class="pills">
@@ -541,14 +510,6 @@ The &lt;code&gt;code element&lt;/code&gt; example
                     <h3>pre</h3>
 
                     <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
-
-                    <pre><code>&lt;html>
-    &lt;head>
-    &lt;/head>
-    &lt;body>
-        &lt;div class="main"> &lt;div>
-    &lt;/body>
-&lt;/html></code></pre>
 
                     <h3>blockquote</h3>
 
