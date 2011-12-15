@@ -413,9 +413,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   .heading-font;
   .muted;
+  &.title {
+    .padding-bottom;
+    border-bottom: 1px solid @base-gray;
+  }
 }
 hgroup {
-  margin-bottom: @unit * 3;
+  .margin-vertical;
   h1, h2, h3, h4, h5, h6 {
     margin: 0px;
   }
@@ -609,11 +613,7 @@ input, select, textarea {
   display: block;
 }
 button, input[type="submit"], input[type="reset"], input[type="button"] {
-  font-size: 14px;
-  cursor: pointer;
-  padding:  @unit @unit * 2;
-  .rounded(3px);
-  text-decoration: none;
+  .button;
 }
 input[type="submit"], button[type="submit"] {
   .buttonize(@positive);
@@ -682,9 +682,10 @@ form {
   .buttonize(@neutral);
   .rounded(3px);
   text-decoration: none;
-  padding:  @unit / 2 @unit * 2;
+  padding: @space / 3 @space / 2;
   font-size: @base-font-size * 1.2;
   display: inline-block;
+  line-height: 1em;
   .ui-font;
   &.discard {
     .buttonize(@negative);
@@ -750,7 +751,7 @@ ul.pills {
     } 
   }
 }
-ul.grid, ol.grid {
+ul.gallery, ol.gallery {
   .unstyled;
   display: block;
   .clearfix();
@@ -849,4 +850,10 @@ code {
   * {
     .box-shadow(0px 0px 3px blue inset);
   }
+}
+
+.toggleDebug {
+  position: fixed;
+  bottom: @space;
+  right: @space;
 }
