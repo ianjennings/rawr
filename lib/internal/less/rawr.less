@@ -266,12 +266,23 @@
 @allColumns: @columnWidth * 16;
 @allGutters: (@gutter * 16) * 2;
 @totalWidth: @allColumns + @allGutters;
-.theWidth (@theColumn: 1, @theGutter: 0) {
-  width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
+.gridBox {
   margin: 0 @gutter;
   float: left;
   display: inline;
   position: relative;
+}
+.theWidth (@theColumn: 1, @theGutter: 0) {
+  width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
+  .gridBox;
+}
+.span-one-third {
+  width: (@totalWidth / 3) - (@gutter * 2);
+  .gridBox;
+}
+.span-two-thirds {
+  width: ((@totalWidth / 3) * 2) - (@gutter * 2);
+  .gridBox;
 }
 .span1 {.theWidth(1,0);}
 .span2 {.theWidth(2,2);}
@@ -419,37 +430,43 @@ small {
 h1 {
   font-size: @reading-font-size * 2;
   small {
-    font-size: @reading-font-size * 1.6;
+    font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 h2 {
   font-size: @reading-font-size * 1.8;
   small {
-    font-size: @reading-font-size * 1.4;
+    font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 h3 {
   font-size: @reading-font-size * 1.6;
   small {
-    font-size: @reading-font-size * 1.2;
+    font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 h4 {
   font-size: @reading-font-size * 1.4;
   small {
-    font-size: @reading-font-size * 1.1;
+    font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 h5 {
   font-size: @reading-font-size * 1.2;
   small {
     font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 h6 {
   font-size: @reading-font-size;
   small {
     font-size: @reading-font-size;
+    font-weight: normal;
   }
 }
 a {
@@ -485,7 +502,7 @@ sub {
   top: .5em;
 }
 hr {
-  .margin-vertical;
+  margin: @space / 2 0px;
   height: 1px;
   border: none;
   .box-shadow(~"0px -1px 0px rgba(0,0,0,.05), 0px 1px 0px rgba(255,255,255,.5)");
@@ -500,11 +517,11 @@ hr {
     .box-shadow(none);
     height: 1px;
   }
-  &.large {
-    .large-margin-vertical;
-  }
   &.small {
-    .small-margin-vertical;
+    margin: @small-space / 2 0px;
+  }
+  &.large {
+    margin: @large-space / 2 0px;
   }
 }
 table {
@@ -526,10 +543,6 @@ table {
     padding: @unit @space;
   }
 }
-img {
-  vertical-align: bottom;
-  display: inline-block;
-}
 blockquote {
   font-size: @reading-font-size;
   font-style: italic;
@@ -546,7 +559,9 @@ caption {
 audio, svg, video {
   .margin-bottom;
 }
-
+img {
+  display: block;
+}
 .media {
   .rounded(3px);
   .margin-bottom;
@@ -737,18 +752,29 @@ ul.pills {
 }
 ul.grid, ol.grid {
   .unstyled;
-  .no-padding;
-  .no-margin;
-  padding-top: @space;
-  margin-top: -@space;
-  margin-left: -@space;
-  margin-bottom: @space;
   display: block;
   .clearfix();
+  .no-margin;
+  margin-left: -@space;
   li {
+    .no-margin-vertical;
     float: left;
-    margin-top: @space;
     margin-left: @space;
+  }
+  &.small {
+    margin-left: -@small-space;
+    li {
+      margin-left: @small-space;
+    }
+  }
+  &.large {
+    margin-left: -@large-space;
+    li {
+      margin-left: @large-space;
+    }
+  }
+  &.inline {
+    
   }
 }
 /* Example Page */
@@ -776,8 +802,13 @@ body {
   }
   &.example {
     border: 1px dashed darken(@base-gray, 10%);
-    .padding-horizontal;
     .rounded(6px);
+  }
+  &.small {
+    .small-padding-horizontal;
+  }
+  &.large {
+    .large-padding-horizontal;
   }
 }
 pre {
@@ -797,18 +828,20 @@ code {
 }
 
 .dino {
-  .padding;
-  .margin;
-  height: @unit * 10;
+  height: @unit * 12;
+  &.normal {
+    .margin-vertical;
+    .padding;
+  }
   &.small {
     height: @unit * 5;
     .small-padding;
-    .small-margin;
+    .small-margin-vertical;
   }
   &.large {
     height: @unit * 15;
     .large-padding;
-    .large-margin;
+    .large-margin-vertical;
   }
   border: 5px dashed @base-gray;
 }
