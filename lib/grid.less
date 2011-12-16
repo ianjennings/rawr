@@ -1,0 +1,50 @@
+
+
+/* Grid Logic */
+@allColumns: @columnWidth * 16;
+@allGutters: (@gutter * 16) * 2;
+@totalWidth: @allColumns + @allGutters;
+.gridBox {
+  margin: 0 @gutter;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.theWidth (@theColumn: 1, @theGutter: 0) {
+  width: (@columnWidth * @theColumn) + (@gutter * @theGutter);
+  .gridBox;
+}
+.span-one-third {
+  width: (@totalWidth / 3) - (@gutter * 2);
+  .gridBox;
+}
+.span-two-thirds {
+  width: ((@totalWidth / 3) * 2) - (@gutter * 2);
+  .gridBox;
+}
+.span1 {.theWidth(1,0);}
+.span2 {.theWidth(2,2);}
+.span3 {.theWidth(3,4);}
+.span4 {.theWidth(4,6);}
+.span5 {.theWidth(5,8);}
+.span6 {.theWidth(6,10);}
+.span7 {.theWidth(7,12);}
+.span8 {.theWidth(8,14);}
+.span9 {.theWidth(9,16);}
+.span10 {.theWidth(10,18);}
+.span11 {.theWidth(11,20);}
+.span12 {.theWidth(12,22);}
+.span13 {.theWidth(13,24);}
+.span14 {.theWidth(14,26);}
+.span15 {.theWidth(15,28);}
+.span16 {.theWidth(16,30);}
+.row {
+  width: @totalWidth;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.row .row {
+  margin: 0px (@gutter * -1);
+  width: auto;
+  display: inline-block;
+}

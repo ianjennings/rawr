@@ -1,0 +1,56 @@
+/* 
+  Unit Variables
+  This is used is used to standardize spacing.
+*/
+@unit: 6px;
+
+@small-space: @unit * 2;   // for smaller elements
+@space: @small-space * 2; // standard for most elements
+@large-space: @space * 2; // for big, section based elements
+
+/*
+  Pallette Variables
+  http://www.colourlovers.com/palette/1506339/Inception
+*/
+@2007: #195768;
+@dance: #000B16;
+@drrred: #a30000;
+@rebecca: #e8f2f4;
+@tommy: #9db1ab;
+
+/* Text Color Variables */
+@heading-text-color: #1d242a;
+@body-text-color: #222323;
+@muted-text-color: lighten(#222323, 20%);
+
+/* Element Color Variables */
+@informative: #119ee0;
+@negative: #e02a11;
+@neutral: #555;
+@notice: #e08711;
+@positive: #4e8c23;
+
+/* 
+  Default Border / Background Color 
+  We never go more than 15% height or 15% lower
+*/
+@base-gray: #e1e1e1;
+
+/* Link Variables */
+@linkColor: darken(@2007, 5);
+@linkColorHover: darken(@2007, 15);
+
+/* Font Variables */
+.heading-font { font-family: 'Droid Sans', sans-serif; }
+.ui-font { font-family: "Droid Sans", sans-serif; }
+.reading-font { font-family: 'Droid Serif', serif;}
+.mono-font { font-family: 'Droid Sans Mono', sans-serif; }
+@base-font-size: @unit * 2;
+@reading-font-size: 16px;
+
+/* 
+  Grid Variables 
+  http://designshack.net/articles/css/introducing-the-less-css-grid
+*/
+@columnWidth: @unit * 6;
+@gutter: @small-space; // small-space * 2 = medium-space

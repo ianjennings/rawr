@@ -1,0 +1,166 @@
+// External Libraries
+// This normalizes all browser elements for every browser
+@import "external/less/normalize";
+
+// Provides sets of useful cross-browser mixins
+@import "external/less/elements";
+
+// Configuration
+@import "config";
+
+// Standardized Spacing Mixins
+@import "spacing";
+
+// Grid Logic
+@import "grid";
+
+// Additional Mixins
+@import "mixins";
+
+// Base Styles
+@import "styles";
+
+/* Example Page */
+body {
+  background-color: #f7f7f7;
+  text-shadow: 0px 1px 1px #fff;
+}
+#span-example {
+  .box {
+    margin-top: 0px;
+    .small-margin-vertical;
+    padding: @small-space;
+    text-align: center;
+  }
+}
+.box {
+  .margin-vertical;
+  .padding-horizontal;
+  .clearfix();
+  &.solid {
+    .box-shadow(~"inset 0px -1px 2px rgba(0,0,0,0.08), inset 0px 1px 2px rgba(255,255,255, .8)");
+    background-color: lighten(@base-gray, 4%);
+    border: 1px solid darken(@base-gray, 10%);
+    .rounded(6px);
+  }
+  &.example {
+    border: 1px dashed darken(@base-gray, 10%);
+    .rounded(6px);
+  }
+  &.small {
+    .small-padding-horizontal;
+  }
+  &.large {
+    .large-padding-horizontal;
+  }
+}
+pre {
+  code {
+    padding: @space;
+  }
+}
+code {
+  font-size: @base-font-size;
+  background-color: @base-gray;
+  border: 1px solid darken(@base-gray, 10%);
+  .box();
+  .inline;
+  padding: 0px 2px;
+  .rounded(3px);
+  .box-shadow(~"0px 1px 2px rgba(0,0,0,.08) inset, 0px -1px 2px rgba(255,255,255, .8), 0px 1px 2px rgba(255,255,255, .8)");
+}
+/* prettify */
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint, code.prettyprint { 
+  text-shadow: none;
+  li {
+     font-size: @base-font-size;
+  }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none; }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
+
+.dinos {
+  width: 400px;
+}
+.dino {
+  height: @unit * 12;
+  &.normal {
+    .margin-vertical;
+    .padding;
+  }
+  &.small {
+    height: @unit * 5;
+    .small-padding;
+    .small-margin-vertical;
+  }
+  &.large {
+    height: @unit * 15;
+    .large-padding;
+    .large-margin-vertical;
+  }
+  border: 5px dashed @base-gray;
+  &.inline {
+    .no-margin-vertical;
+  }
+}
+.debug {
+  * {
+    .box-shadow(0px 0px 3px blue inset);
+  }
+}
+
+.toggleDebug {
+  position: fixed;
+  top: 0;
+  right: @space;
+  z-index: 5;
+}

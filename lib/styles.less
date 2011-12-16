@@ -1,0 +1,440 @@
+
+
+/* HTML ELEMENTS */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  .ui-font;
+  vertical-align: middle;
+  color: @body-text-color;
+  font-size: @base-font-size;
+}
+strong {
+  font-weight: bold;
+}
+// multi-line elements
+p, ul, ol, dl, dt, dd, address {
+  font-size: @reading-font-size;
+  line-height: 1.5em;
+}
+address {
+  .margin-vertical;
+}
+dl {
+  .padding-vertical;
+}
+dt {
+  font-weight: bold;
+}
+p {
+  .margin-vertical;
+  .reading-font;
+  text-shadow: none;
+}
+span {
+}
+ol, ul {
+  .margin-vertical;
+  .padding-left;
+  &.unstyled {
+    li {
+      padding: 0px;
+    }
+  }
+  ul, ol {
+    .no-margin-vertical;
+  }
+  &.spaced {
+    &.small {
+      .small-margin-vertical;
+    }
+    li {
+      .margin-vertical;
+    }
+    &.large {
+      .large-margin-vertical;
+    }
+  }
+}
+pre, code, kbd, samp {
+  .mono-font; 
+}
+code.prettyprint {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: visible;
+  display: block;
+}
+code.prettyprint, pre.prettyprint {
+  .mono-font; 
+}
+pre {
+  .margin-vertical;
+}
+em {
+  font-style: italic;
+}
+// single-line text elements
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  .margin-vertical;
+  font-weight: bold;
+  .heading-font;
+  .muted;
+  &.title {
+    .padding-bottom;
+    border-bottom: 1px solid @base-gray;
+  }
+}
+hgroup {
+  .margin-vertical;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+  }
+}
+h1, h2, h3, h4 {
+  color: @heading-text-color;
+}
+small {
+  font-size: @base-font-size;
+  .muted;
+}
+h1 {
+  font-size: @reading-font-size * 2;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+h2 {
+  font-size: @reading-font-size * 1.8;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+h3 {
+  font-size: @reading-font-size * 1.6;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+h4 {
+  font-size: @reading-font-size * 1.4;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+h5 {
+  font-size: @reading-font-size * 1.2;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+h6 {
+  font-size: @reading-font-size;
+  small {
+    font-size: @reading-font-size;
+    font-weight: normal;
+  }
+}
+a {
+  color: @linkColor;
+  text-decoration: underline;
+  &.invert {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:hover {
+    color: @linkColorHover;
+    text-decoration: none;
+  }
+}
+section, article {
+  .large-margin-vertical;
+}
+dd {}
+sup,
+sub {
+  height: 0px;
+  line-height: 1em;
+  vertical-align: baseline;
+  -vertical-align: bottom;
+  position: relative;
+}
+sup {
+  bottom: .75em;
+}
+sub {
+  top: .5em;
+}
+hr {
+  margin: @space / 2 0px;
+  height: 1px;
+  border: none;
+  .box-shadow(~"0px -1px 0px rgba(0,0,0,.05), 0px 1px 0px rgba(255,255,255,.5)");
+  &.whole-box {
+    position: relative;
+    left: -@space;
+    width: 100%;
+    padding-left: @space;
+  }
+  &.space {
+    border: none;
+    .box-shadow(none);
+    height: 1px;
+  }
+  &.small {
+    margin: @small-space / 2 0px;
+  }
+  &.large {
+    margin: @large-space / 2 0px;
+  }
+}
+table {
+  .rounded(5px);
+  width: 100%;
+  text-align: left;
+  border: 1px solid @base-gray;
+  .margin-bottom;
+  thead, tfoot {
+    border-bottom: 1px solid @base-gray;
+    border-top: 1px solid @base-gray;
+    background-color: @base-gray;
+    font-weight: bold;
+    th {
+      border-right: 1px solid @base-gray;
+    }
+  }
+  th, td {
+    padding: @unit @space;
+  }
+}
+blockquote {
+  font-size: @reading-font-size;
+  font-style: italic;
+  .margin;
+  .no-margin-left;
+  .padding-left;
+  line-height: 1.5em;
+  border-left: @unit solid @base-gray;
+}
+caption {
+  font-size: @base-font-size;
+  line-height: 1.5em;
+}
+audio, svg, video, img {
+  .margin-vertical;
+  display: block;
+}
+/* Forms */
+input, select, textarea {
+  outline: none;
+  .rounded(3px);
+  border: 1px solid @base-gray;
+  .box-shadow(~"0px 1px 1px rgba(255,255,255, .8)");
+  padding: @unit;
+  background-color: lighten(@base-gray, 10%);
+  &[type="text"], &[type="password"] {
+    cursor: text;
+  }
+  &:hover {
+    background-color: lighten(@base-gray, 11%);
+    border: 1px solid darken(@base-gray, 10%);
+  }
+  &:focus {
+    background-color: lighten(@base-gray, 12%);
+    border: 1px solid darken(@base-gray, 30%);
+    .box-shadow(~"0px 0px 2px rgba(255,255,255, .9)");
+  }
+  display: block;
+}
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  .button;
+}
+input[type="submit"], button[type="submit"] {
+  .buttonize(@positive);
+}
+input[type="reset"], button[type="reset"] {
+  .buttonize(@negative);
+}
+input[type="button"] , button{
+  .buttonize(@neutral);
+}
+input[type="checkbox"], input[type="radio"] {
+  display: inline-block;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+figcaption, caption {
+  .margin-vertical;
+}
+// this doesn't work inside a .box :(
+legend {
+  font-size: @reading-font-size * 1.2;
+  font-weight: bold;
+  .margin-vertical;
+}
+fieldset {
+  border: 1px solid @base-gray;
+  .margin-vertical;
+  padding:  0px @space;
+  .rounded(5px);
+}
+label {
+  line-height: 2em;
+}
+form {
+  width: 100%;
+  &.wide {
+    label {
+      width: 40%;
+      text-align: right;
+      display: inline-block;
+      .margin-right;
+    }
+    input, select, textarea, ol, ul {
+      display: inline-block;
+    }
+  }
+}
+
+.media {
+  display: block;
+  max-width: 500px;
+  .rounded(3px);
+  padding:  1px;
+  border: 1px solid darken(@base-gray, 20%);
+}
+a:hover {
+  .media {
+    border: 1px solid darken(@base-gray, 30%);
+    .drop-shadow(0px, 0px, 5px, .2);
+  }
+}
+
+/* Alerts */
+.alert {
+  .rounded(4px);
+  .alertize(@neutral);
+  &.negative {
+    .alertize(@negative);
+  }
+  &.informative {
+    .alertize(@informative);
+  }
+  &.positive {
+    .alertize(@positive);
+  }
+  &.notice {
+    .alertize(@notice);
+  }
+}
+
+/* Buttons */
+.button {
+  .buttonize(@neutral);
+  .rounded(3px);
+  text-decoration: none;
+  font-size: @base-font-size * 1.2;
+  line-height: @unit * 5;
+  padding: @unit / 2 2 * @unit;
+  display: inline-block;
+  .margin-vertical;
+  .ui-font;
+  &.discard {
+    .buttonize(@negative);
+  }
+  &.commit {
+    .buttonize(@positive);
+  }
+  &.action {
+    .buttonize(@informative);
+  }
+  &.explain {
+    .buttonize(@notice);
+  }
+  &.inline {
+    .no-margin-vertical;
+  }
+}
+/* Pills */
+.pill {
+  &:link, &:visited {
+    display: inline-block;
+    padding:  @unit / 2 @unit * 2;
+    .rounded(3px);
+    text-shadow: none;
+    text-decoration: none;
+    color: @heading-text-color;
+    .margin-vertical;
+    &.selected {
+      color: #ffffff;
+      background-color: @heading-text-color;
+    }
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: @heading-text-color;
+  }
+  &.inline {
+    .no-margin-vertical;
+  }
+}
+ul.gallery, ol.gallery {
+  .unstyled;
+  .no-margin;
+  .clearfix();
+  margin-top: -@space;
+  margin-left: -@space;
+  padding-top: @space * 2;
+  margin-bottom: 0px;
+  li {
+    float: left;
+    margin-top: -@space;
+    margin-left: @space;
+    margin-bottom: 0px;
+    padding: 0px;
+    display: block;
+  }
+  &.inline {
+    margin-top: -@space * 2;
+    margin-bottom: -@space;
+  }
+  &.small {
+    margin-top: -@small-space;
+    margin-left: -@small-space;
+    padding-top: @small-space * 2;
+    li {
+      margin-top: -@small-space;
+      margin-left: @small-space;
+    }
+    &.inline {
+      margin-top: -@small-space * 2;
+      margin-bottom: -@small-space;
+    }
+  }
+  &.large {
+    margin-top: -@large-space;
+    margin-left: -@large-space;
+    padding-top: @large-space * 2;
+    margin-bottom: -@large-space;
+    li {
+      margin-top: -@large-space;
+      margin-left: @large-space;
+    }
+    &.inline {
+      margin-top: -@large-space * 2;
+      margin-bottom: -@large-space;
+    }
+  }
+}
