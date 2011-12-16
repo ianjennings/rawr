@@ -33,8 +33,6 @@ p {
   .reading-font;
   text-shadow: none;
 }
-span {
-}
 ol, ul {
   .margin-vertical;
   .padding-left;
@@ -176,7 +174,7 @@ sub {
   top: .5em;
 }
 hr {
-  margin: @space / 2 0px;
+  margin: @space 0px;
   height: 1px;
   border: none;
   .box-shadow(~"0px -1px 0px rgba(0,0,0,.05), 0px 1px 0px rgba(255,255,255,.5)");
@@ -192,10 +190,10 @@ hr {
     height: 1px;
   }
   &.small {
-    margin: @small-space / 2 0px;
+    margin: @small-space 0px;
   }
   &.large {
-    margin: @large-space / 2 0px;
+    margin: @large-space 0px;
   }
 }
 table {
@@ -437,4 +435,40 @@ ul.gallery, ol.gallery {
       margin-bottom: -@large-space;
     }
   }
+}
+.box {
+  .margin-vertical;
+  .padding-horizontal;
+  .clearfix();
+  &.solid {
+    .box-shadow(~"inset 0px -1px 2px rgba(0,0,0,0.08), inset 0px 1px 2px rgba(255,255,255, .8)");
+    background-color: lighten(@base-gray, 4%);
+    border: 1px solid darken(@base-gray, 10%);
+    .rounded(6px);
+  }
+  &.example {
+    border: 1px dashed darken(@base-gray, 10%);
+    .rounded(6px);
+  }
+  &.small {
+    .small-padding-horizontal;
+  }
+  &.large {
+    .large-padding-horizontal;
+  }
+}
+pre {
+  code {
+    padding: @space;
+  }
+}
+code {
+  font-size: @base-font-size;
+  background-color: @base-gray;
+  border: 1px solid darken(@base-gray, 10%);
+  .box();
+  .inline;
+  padding: 0px 2px;
+  .rounded(3px);
+  .box-shadow(~"0px 1px 2px rgba(0,0,0,.08) inset, 0px -1px 2px rgba(255,255,255, .8), 0px 1px 2px rgba(255,255,255, .8)");
 }
