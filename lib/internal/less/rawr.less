@@ -31,7 +31,7 @@
 @negative: #e02a11;
 @neutral: #555;
 @notice: #e08711;
-@positive: #53960b;
+@positive: #4e8c23;
 
 /* 
   Default Border / Background Color 
@@ -374,6 +374,9 @@ p, ul, ol, dl, dt, dd, address {
   font-size: @reading-font-size;
   line-height: 1.5em;
 }
+address {
+  .margin-vertical;
+}
 dt {
   font-weight: bold;
 }
@@ -631,13 +634,15 @@ abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
+// this doesn't work inside a .box :(
 legend {
   font-size: @reading-font-size * 1.2;
   font-weight: bold;
+  .margin-vertical;
 }
 fieldset {
   border: 1px solid @base-gray;
-  .margin-bottom;
+  .margin-vertical;
   padding:  0px @space;
   .rounded(5px);
 }
@@ -707,27 +712,6 @@ ul.buttons, ul.pills {
     .margin-vertical;
   }
 }
-ul.inline, ol.inline {
-  .unstyled;
-  .no-padding;
-  > li {
-    .inline;
-    .no-margin;
-    .no-padding;
-  }
-  li {
-    margin-right: @small-space;
-  }
-  &.float-right {
-    li {
-      margin-right: 0px;
-      margin-left: @small-space;
-    }
-    ol {
-      margin-right: @small-space;
-    }
-  }
-}
 /* Pills */
 ul.pills {
   li {
@@ -752,30 +736,29 @@ ul.pills {
   }
 }
 ul.gallery, ol.gallery {
-  .unstyled;
   display: block;
-  .clearfix();
-  .no-margin;
+  .margin-vertical;
   margin-left: -@space;
+  .unstyled;
+  .clearfix();
   li {
     .no-margin-vertical;
-    float: left;
+    display: inline-block;
     margin-left: @space;
   }
   &.small {
+    .small-margin-vertical;
     margin-left: -@small-space;
     li {
       margin-left: @small-space;
     }
   }
   &.large {
+    .large-margin-vertical;
     margin-left: -@large-space;
     li {
       margin-left: @large-space;
     }
-  }
-  &.inline {
-    
   }
 }
 /* Example Page */
@@ -797,7 +780,7 @@ body {
   .clearfix();
   &.solid {
     .box-shadow(~"inset 0px -1px 2px rgba(0,0,0,0.08), inset 0px 1px 2px rgba(255,255,255, .8)");
-    background-color: @base-gray;
+    background-color: lighten(@base-gray, 4%);
     border: 1px solid darken(@base-gray, 10%);
     .rounded(6px);
   }
@@ -827,7 +810,9 @@ code {
   .rounded(3px);
   .box-shadow(~"0px 1px 2px rgba(0,0,0,.08) inset, 0px -1px 2px rgba(255,255,255, .8), 0px 1px 2px rgba(255,255,255, .8)");
 }
-
+.dinos {
+  width: 250px;
+}
 .dino {
   height: @unit * 12;
   &.normal {
