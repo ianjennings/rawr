@@ -44,11 +44,10 @@
 @linkColorHover: darken(@2007, 15);
 
 /* Font Variables */
-.heading-font { font-family: "Droid Sans", sans-serif; }
+.heading-font { font-family: 'Droid Sans', sans-serif; }
 .ui-font { font-family: "Droid Sans", sans-serif; }
-.reading-font { font-family: "Droid Serif", serif; }
-.mono-font { font-family: "Droid Sans Mono",sans-serif; }
-
+.reading-font { font-family: 'Droid Serif', serif;}
+.mono-font { font-family: 'Droid Sans Mono', sans-serif; }
 @base-font-size: @unit * 2;
 @reading-font-size: 16px;
 
@@ -377,6 +376,9 @@ p, ul, ol, dl, dt, dd, address {
 address {
   .margin-vertical;
 }
+dl {
+  .padding-vertical;
+}
 dt {
   font-weight: bold;
 }
@@ -386,21 +388,20 @@ p {
   text-shadow: none;
 }
 span {
-  .reading-font;
-  font-size: @reading-font-size;
 }
 ol, ul {
   .margin-vertical;
-  li {
-    margin: @unit 0px;
-  }
   &.unstyled {
     li {
+    .margin-vertical;
       padding: 0px;
     }
   }
 }
 pre, code, kbd, samp {
+  .mono-font; 
+}
+code.prettyprint, pre.prettyprint {
   .mono-font; 
 }
 pre {
@@ -563,10 +564,8 @@ caption {
   font-size: @base-font-size;
   line-height: 1.5em;
 }
-audio, svg, video {
-  .margin-bottom;
-}
-img {
+audio, svg, video, img {
+  .margin-vertical;
   display: block;
 }
 .media {
@@ -634,6 +633,9 @@ abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
+figcaption, caption {
+  .margin-vertical;
+}
 // this doesn't work inside a .box :(
 legend {
   font-size: @reading-font-size * 1.2;
@@ -653,7 +655,7 @@ form {
   width: 100%;
   &.wide {
     label {
-      width: 30%;
+      width: 40%;
       text-align: right;
       display: inline-block;
       .margin-right;
@@ -687,10 +689,11 @@ form {
   .buttonize(@neutral);
   .rounded(3px);
   text-decoration: none;
-  padding: @space / 3 @space / 2;
   font-size: @base-font-size * 1.2;
+  line-height: @unit * 5;
+  padding: @unit / 2 2 * @unit;
   display: inline-block;
-  line-height: 1em;
+  .margin-vertical;
   .ui-font;
   &.discard {
     .buttonize(@negative);
@@ -704,60 +707,78 @@ form {
   &.explain {
     .buttonize(@notice);
   }
-}
-ul.buttons, ul.pills {
-  .unstyled;
-  .margin-vertical;
-  li {
-    .margin-vertical;
+  &.inline {
+    .no-margin-vertical;
   }
 }
 /* Pills */
-ul.pills {
-  li {
-    a:link, a:visited {
-      display: inline-block;
-      padding:  @unit / 2 @unit * 2;
-      .rounded(3px);
-      text-shadow: none;
-      text-decoration: none;
-      color: @heading-text-color;
-    }
-    a:hover {
+.pill {
+  &:link, &:visited {
+    display: inline-block;
+    padding:  @unit / 2 @unit * 2;
+    .rounded(3px);
+    text-shadow: none;
+    text-decoration: none;
+    color: @heading-text-color;
+    .margin-vertical;
+    &.selected {
       color: #ffffff;
       background-color: @heading-text-color;
     }
-    &.selected {
-      a:link, a:visited {
-        color: #ffffff;
-        background-color: @heading-text-color;
-      }
-    } 
+  }
+  &:hover {
+    color: #ffffff;
+    background-color: @heading-text-color;
+  }
+  &.inline {
+    .no-margin-vertical;
   }
 }
 ul.gallery, ol.gallery {
-  display: block;
-  .margin-vertical;
-  margin-left: -@space;
   .unstyled;
+  .no-margin;
   .clearfix();
+  margin-top: -@space;
+  margin-left: -@space;
+  padding-top: @space * 2;
+  margin-bottom: 0px;
   li {
-    .no-margin-vertical;
-    display: inline-block;
+    float: left;
+    margin-top: -@space;
     margin-left: @space;
+    margin-bottom: 0px;
+    padding: 0px;
+    display: block;
+  }
+  &.inline {
+    margin-top: -@space * 2;
+    margin-bottom: -@space;
   }
   &.small {
-    .small-margin-vertical;
+    margin-top: -@small-space;
     margin-left: -@small-space;
+    padding-top: @small-space * 2;
     li {
+      margin-top: -@small-space;
       margin-left: @small-space;
+    }
+    &.inline {
+      margin-top: -@small-space * 2;
+      margin-bottom: -@small-space;
     }
   }
   &.large {
-    .large-margin-vertical;
+    margin-top: -@large-space;
     margin-left: -@large-space;
+    padding-top: @large-space * 2;
+    margin-bottom: -@large-space;
     li {
+      margin-top: -@large-space;
       margin-left: @large-space;
+    }
+    &.inline {
+      margin-top: -@large-space * 2;
+      margin-bottom: -@large-space;
     }
   }
 }
@@ -810,8 +831,69 @@ code {
   .rounded(3px);
   .box-shadow(~"0px 1px 2px rgba(0,0,0,.08) inset, 0px -1px 2px rgba(255,255,255, .8), 0px 1px 2px rgba(255,255,255, .8)");
 }
+/* prettify */
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint, code.prettyprint { 
+  text-shadow: none;
+  li {
+     font-size: @base-font-size;
+  }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none; }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
+
+
+
 .dinos {
-  width: 250px;
+  width: 400px;
 }
 .dino {
   height: @unit * 12;
@@ -839,6 +921,7 @@ code {
 
 .toggleDebug {
   position: fixed;
-  bottom: @space;
+  top: 0;
   right: @space;
+  z-index: 5;
 }
