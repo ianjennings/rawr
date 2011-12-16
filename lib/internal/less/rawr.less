@@ -391,10 +391,24 @@ span {
 }
 ol, ul {
   .margin-vertical;
+  .padding-left;
   &.unstyled {
     li {
-    .margin-vertical;
       padding: 0px;
+    }
+  }
+  ul, ol {
+    .no-margin-vertical;
+  }
+  &.spaced {
+    &.small {
+      .small-margin-vertical;
+    }
+    li {
+      .margin-vertical;
+    }
+    &.large {
+      .large-margin-vertical;
     }
   }
 }
@@ -912,6 +926,9 @@ li.L9 { background: #eee }
     .large-margin-vertical;
   }
   border: 5px dashed @base-gray;
+  &.inline {
+    .no-margin-vertical;
+  }
 }
 .debug {
   * {
