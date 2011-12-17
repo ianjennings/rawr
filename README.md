@@ -16,11 +16,11 @@ If you want to keep things organized, you can use the following example:
 
 This is our directory structure:
     
-    * /
-      * index.html
-      * /static
-          * my-project.less
-          * /rawr
+    /
+      index.html
+      /static
+          my-project.less
+          /rawr
 
 index.html would look like this:
 
