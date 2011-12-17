@@ -45,7 +45,7 @@ and my-project.less would look like:
     @import "rawr/lib/rawr";
     
     body {
-      background-color: @base-gray;
+      background-color: @informative;
     }
 
 You can now access all the variables and standarized margins provided by rawr in your less document.
