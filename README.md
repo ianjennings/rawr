@@ -32,6 +32,9 @@ index.html would look like this:
             <title>rawr!</title>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
             <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,700italic' rel='stylesheet' type='text/css'>
+            <script type="text/javascript">
+                less = { env: 'development' };
+            </script>
             <link rel="stylesheet/less" type="text/css" href="static/my-project.less">
             <script src="static/rawr/lib/external/js/less.min.js" type="text/javascript"></script>
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
