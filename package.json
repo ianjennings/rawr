@@ -1,0 +1,19 @@
+{
+  "author": "Ian Jennings <ian@meetjennings.com> (http://meetjennings.com/)",
+  "name": "rawr",
+  "description": "Rawr is a framework to help engineering type people good looking websites quickly. Rawr uses the power of standardized margins to create a consistent and pixel perfect look.",
+  "version": "0.0.1",
+  "homepage": "http://getrawr.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ianjennings/rawr.git"
+  },
+  "engines": {
+    "node": "~0.6.5"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "~1.1.2",
+    "less": "~1.1.6"
+  }
+}
