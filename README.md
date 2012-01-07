@@ -3,6 +3,10 @@
 Rawr is a framework to create good looking websites quickly. Rawr uses the power of standardized margins to create a consistent and pixel perfect look.
 
 ---
+  
+You can find the design documentation at [the official website](http://getrawr.com/).
+
+---
 
 To use rawr, just import the less document:
 
@@ -52,5 +56,3 @@ and my-project.less would look like:
     }
 
 You can now access all the variables and standarized margins provided by rawr in your less document.
-  
-You can find the design documentation at [the official website](http://getrawr.com/).
