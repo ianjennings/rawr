@@ -34,6 +34,7 @@ p {
   text-shadow: none;
 }
 ol, ul {
+  list-style-position: inside;
   .margin-vertical;
   .padding-left;
   &.unstyled {
@@ -223,6 +224,11 @@ blockquote {
   .padding-left;
   line-height: 1.5em;
   border-left: @unit solid @base-gray;
+  overflow: auto;
+}
+cite {
+  display: block;
+  .margin-vertical;
 }
 caption {
   font-size: @base-font-size;
@@ -373,16 +379,16 @@ a:hover {
     .rounded(3px);
     text-shadow: none;
     text-decoration: none;
-    color: @heading-text-color;
+    color: @pillColor;
     .margin-vertical;
     &.selected {
       color: #ffffff;
-      background-color: @heading-text-color;
+      background-color: @pillColor;
     }
   }
   &:hover {
     color: #ffffff;
-    background-color: @heading-text-color;
+    background-color: @pillColor;
   }
   &.inline {
     .no-margin-vertical;

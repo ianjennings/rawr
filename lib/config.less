@@ -10,25 +10,25 @@
 
 /*
   Pallette Variables
-  http://www.colourlovers.com/palette/1506339/Inception
+  http://www.colourlovers.com/palette/879133/retro_record
 */
-@2007: #195768;
-@dance: #000B16;
-@drrred: #a30000;
-@rebecca: #e8f2f4;
-@tommy: #9db1ab;
+@force: #A4BA8C;
+@retro: #F6CF74;
+@warming: #C74350;
+@t: #000305;
+@record: #CFDB79;
 
 /* Text Color Variables */
-@heading-text-color: #1d242a;
-@body-text-color: #222323;
-@muted-text-color: lighten(#222323, 20%);
+@heading-text-color: @warming;
+@body-text-color: lighten(@t, 10%);
+@muted-text-color: lighten(@t, 20%);
 
 /* Element Color Variables */
-@informative: #119ee0;
-@negative: #e02a11;
+@informative: @retro;
+@negative: @warming;
 @neutral: #555;
-@notice: #e08711;
-@positive: #4e8c23;
+@notice: @record;
+@positive: @force;
 
 /* 
   Default Border / Background Color 
@@ -37,8 +37,11 @@
 @base-gray: #e1e1e1;
 
 /* Link Variables */
-@linkColor: darken(@2007, 5);
-@linkColorHover: darken(@2007, 15);
+@linkColor: darken(@force, 15%);
+@linkColorHover: darken(@force, 25%);
+
+/* Pills */
+@pillColor: darken(@force, 15%);
 
 /* Font Variables */
 .heading-font { font-family: 'Droid Sans', sans-serif; }
